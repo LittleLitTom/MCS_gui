@@ -8,7 +8,4 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     return a.exec();
-    //hello world
-    //helloworld2
-//ee
 }
