@@ -22,6 +22,27 @@ add_executable(qMCS_gui
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    accelerater.cpp
+    accelerater.h
+    accelerater.ui
+    interbd.h
+    interbd.cpp
+    interbd.ui
+    interps.h
+    interps.cpp
+    interps.ui
+    psdialog.cpp
+    psdialog.h
+    psdialog.ui
+    dbdetails.cpp
+    dbdetails.h
+    dbdetails.ui
+    qpsbutton.h
+    qpsbutton.cpp
+    qscbutton.h
+    qscbutton.cpp
+    powersupply.h
+    powersupply.cpp
     ${TS_FILES}
     ${RESOURCES}
   )
