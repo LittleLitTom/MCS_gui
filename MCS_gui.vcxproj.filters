@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="accelerater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbdetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interbd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="powersupply.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="psdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qpsbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qscbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="accelerater.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dbdetails.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="interbd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="interps.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="powersupply.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="psdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qpsbutton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qscbutton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qMCS_gui_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="accelerater.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dbdetails.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="interbd.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="interps.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="psdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_5.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_6.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Boff_7.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_5.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_6.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Bon_7.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\FCoff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\FCon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICoff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICoff_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICoff_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICoff_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICon_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICon_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\ICon_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Kickeroff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Kickeron_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCoff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCoff_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCoff_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCoff_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCon_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCon_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SCon_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SToff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SToff_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SToff_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\SToff_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\STon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\STon_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\STon_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\STon_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\accelerator.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\degrader.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\light_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\light_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\line_0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\line_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\line_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\line_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\line_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="mcs_resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="Resources\qoff_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qoff_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qoff_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qoff_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qon_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qon_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qon_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qon_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

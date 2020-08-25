@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    ui->statusbar;
     ui->setupUi(this);
     interBD_ = new interBD(this);
     interPS_ = new interps(this);
