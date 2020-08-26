@@ -28,6 +28,7 @@ private:
     //on? off?
     uint m_state;
 
+    //×Ó½çÃæ
     PSDialog* PSDialog_;
 };
 

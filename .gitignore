@@ -71,9 +71,8 @@ Thumbs.db
 *.dll
 *.exe
 
-/.vs/MCS_gui/v16/Browse.VC.db-shm
-/.vs/MCS_gui/v16/Browse.VC.db-wal
+# vs project directory
 /.vs
 /debug
-/out/build/x64-Debug (默认值)
+/out
 /release

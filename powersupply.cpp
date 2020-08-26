@@ -3,7 +3,11 @@
 
 PowerSupply::PowerSupply(QObject *parent) : QObject(parent)
 {
-
+    UaPlatformLayer::init();
+    SampleClient* myclient = new SampleClient();
+    delete myclient;
+    myclient = nullptr;
+    UaPlatformLayer::cleanup();
 }
 
 

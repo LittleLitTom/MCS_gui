@@ -7,7 +7,8 @@ QPSButton::QPSButton(QWidget *parent) : QPushButton(parent)
     //将状态指示灯与电源状态联系
     this->connect(this,&QPSButton::stateChanged,this,&QPSButton::changeButtonStyle);
 
-    //initialize
+    //初始化电源灯状态
+    PSDialog_ = nullptr;
     m_state = true;
     m_type = 4;
     m_location = 99999;
@@ -16,8 +17,11 @@ QPSButton::QPSButton(QWidget *parent) : QPushButton(parent)
 
 void QPSButton::onclick()
 {
-    PSDialog_ = new PSDialog(nullptr,objectName());
-    PSDialog_->show();
+    if (PSDialog_ == nullptr)
+    {
+        PSDialog_ = new PSDialog(this, objectName());
+        PSDialog_->show();
+    }
 }
 
 //电源的状态指示灯改变，电源状态有on,off,error三种

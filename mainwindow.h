@@ -34,6 +34,6 @@ private:
     interps* interPS_;
 
     //多线程管理类
-    QThread workThread;
+    QThread* workThread;
 };
 #endif // MAINWINDOW_H

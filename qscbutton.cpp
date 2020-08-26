@@ -8,6 +8,7 @@ QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
     this->connect(this,&QSCButton::stateChanged,this,&QSCButton::changeButtonStyle);
 
     //initialize
+    DBDetails_ = nullptr;
     m_state = true;
     m_type = 4;
     m_location = 99999;
@@ -16,8 +17,11 @@ QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
 
 void QSCButton::onclick()
 {
-    DBDetails_ = new DBDetails(nullptr,objectName());
-    DBDetails_->show();
+    if (DBDetails_ == nullptr)
+    {
+        DBDetails_ = new DBDetails(this, objectName());
+        DBDetails_->show();
+    }
 }
 
 void QSCButton::changeButtonStyle()

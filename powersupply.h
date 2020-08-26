@@ -2,6 +2,8 @@
 #define POWERSUPPLY_H
 
 #include <QObject>
+#include "uaplatformlayer.h"
+#include "sampleclient.h"
 
 class PowerSupply : public QObject
 {
@@ -19,7 +21,7 @@ signals:
 
 private:
     QString PSId;
-    //ps session
+
     //float Current;
     //float Voltage;
 };
