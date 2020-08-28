@@ -17,11 +17,8 @@ QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
 
 void QSCButton::onclick()
 {
-    if (DBDetails_ == nullptr)
-    {
         DBDetails_ = new DBDetails(this, objectName());
         DBDetails_->show();
-    }
 }
 
 void QSCButton::changeButtonStyle()
@@ -52,5 +49,5 @@ void QSCButton::changeButtonStyle()
     //设置Mask会带来锯齿、图片变形的问题
     //QPixmap pixmap(image);
     //setMask(pixmap.mask());
-    setStyleSheet("QPushButton{background-image: url(" + image + ");}");
+    setStyleSheet("QPushButton#"+objectName()+"{background-image: url(" + image + ");}");
 }

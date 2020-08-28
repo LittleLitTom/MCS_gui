@@ -214,6 +214,7 @@
     <ClCompile Include="qscbutton.cpp" />
     <ClCompile Include="sampleclient.cpp" />
     <ClCompile Include="SampleSubscription.cpp" />
+    <ClCompile Include="utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="accelerater.h">
@@ -337,6 +338,7 @@
   <ItemGroup>
     <ClInclude Include="sampleclient.h" />
     <ClInclude Include="SampleSubscription.h" />
+    <ClInclude Include="utilities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

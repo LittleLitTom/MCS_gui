@@ -370,7 +370,7 @@
              <rect>
               <x>380</x>
               <y>60</y>
-              <width>399</width>
+              <width>416</width>
               <height>31</height>
              </rect>
             </property>
@@ -886,8 +886,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>212</width>
-               <height>1562</height>
+               <width>215</width>
+               <height>1762</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_3">
@@ -3605,7 +3605,7 @@
             <rect>
              <x>370</x>
              <y>240</y>
-             <width>399</width>
+             <width>416</width>
              <height>51</height>
             </rect>
            </property>
@@ -4422,8 +4422,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>251</width>
-                 <height>87</height>
+                 <width>247</width>
+                 <height>78</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -4500,8 +4500,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>190</width>
-                 <height>87</height>
+                 <width>186</width>
+                 <height>80</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -4619,6 +4619,12 @@
           <weight>75</weight>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="checkState">
+         <enum>Unchecked</enum>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
         </property>
         <item>
          <property name="text">
@@ -4821,6 +4827,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1E</string>
@@ -4829,6 +4841,12 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
         </item>
@@ -4841,6 +4859,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1E</string>
@@ -4849,6 +4873,12 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
          <item>
@@ -4860,6 +4890,12 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
          </item>
          <item>
           <property name="text">
@@ -4869,6 +4905,12 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
         </item>
@@ -4881,6 +4923,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STY1E</string>
@@ -4889,6 +4937,12 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
          <item>
@@ -4900,6 +4954,12 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
          </item>
          <item>
           <property name="text">
@@ -4909,6 +4969,12 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
         </item>
@@ -4924,6 +4990,12 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="checkState">
+         <enum>Unchecked</enum>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -4933,6 +5005,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>Q1S1</string>
@@ -4941,6 +5019,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
          <item>
@@ -4952,6 +5033,9 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
          </item>
          <item>
           <property name="text">
@@ -4961,6 +5045,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
          <item>
@@ -4972,6 +5059,9 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
          </item>
          <item>
           <property name="text">
@@ -4981,6 +5071,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
          <item>
@@ -4992,6 +5085,9 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
          </item>
          <item>
           <property name="text">
@@ -5001,6 +5097,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
         </item>
@@ -5013,6 +5112,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1S1</string>
@@ -5021,6 +5126,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
          <item>
@@ -5031,6 +5139,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
         </item>
@@ -5043,6 +5154,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1S1</string>
@@ -5051,6 +5168,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
         </item>
@@ -5063,6 +5183,12 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STY1S1</string>
@@ -5071,6 +5197,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
           </property>
          </item>
         </item>
@@ -5086,6 +5215,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5094,6 +5226,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5135,6 +5270,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
         </item>
         <item>
          <property name="text">
@@ -5144,6 +5282,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5175,6 +5316,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STY1F1</string>
@@ -5198,6 +5342,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5206,6 +5353,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5277,6 +5427,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
         </item>
         <item>
          <property name="text">
@@ -5286,6 +5439,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5335,6 +5491,9 @@
            </color>
           </brush>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STY1P2</string>
@@ -5358,6 +5517,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5366,6 +5528,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5447,6 +5612,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1S2</string>
@@ -5477,6 +5645,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1S2</string>
@@ -5496,6 +5667,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5520,6 +5694,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5528,6 +5705,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5599,6 +5779,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1G2</string>
@@ -5639,6 +5822,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1G2</string>
@@ -5668,6 +5854,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5712,6 +5901,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5720,6 +5912,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5791,6 +5986,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
         </item>
         <item>
          <property name="text">
@@ -5800,6 +5998,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5831,6 +6032,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STY1P3</string>
@@ -5854,6 +6058,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -5862,6 +6069,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -5943,6 +6153,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1S3</string>
@@ -5973,6 +6186,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1S3</string>
@@ -5992,6 +6208,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -6016,6 +6235,9 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
         <item>
          <property name="text">
           <string>Q</string>
@@ -6024,6 +6246,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -6095,6 +6320,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>B1G3</string>
@@ -6135,6 +6363,9 @@
            <pointsize>16</pointsize>
           </font>
          </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
          <item>
           <property name="text">
            <string>STX1G3</string>
@@ -6164,6 +6395,9 @@
           <font>
            <pointsize>16</pointsize>
           </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
          </property>
          <item>
           <property name="text">
@@ -6208,7 +6442,7 @@
      <x>0</x>
      <y>0</y>
      <width>1366</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

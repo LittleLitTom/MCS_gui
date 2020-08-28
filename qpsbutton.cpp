@@ -7,21 +7,18 @@ QPSButton::QPSButton(QWidget *parent) : QPushButton(parent)
     //将状态指示灯与电源状态联系
     this->connect(this,&QPSButton::stateChanged,this,&QPSButton::changeButtonStyle);
 
-    //初始化电源灯状态
+    //初始化父子界面
     PSDialog_ = nullptr;
+    //初始化电源灯状态
     m_state = true;
     m_type = 4;
     m_location = 99999;
 }
 
-
 void QPSButton::onclick()
 {
-    if (PSDialog_ == nullptr)
-    {
-        PSDialog_ = new PSDialog(this, objectName());
-        PSDialog_->show();
-    }
+    PSDialog_ = new PSDialog(this, objectName());
+    PSDialog_->show();
 }
 
 //电源的状态指示灯改变，电源状态有on,off,error三种
@@ -61,5 +58,5 @@ void QPSButton::changeButtonStyle()
     //设置Mask会带来锯齿、图片变形的问题,因此视情况而定
     //QPixmap pixmap(image);
     //setMask(pixmap.mask());
-    setStyleSheet("QPushButton{background-image: url("+image +");}");
+    setStyleSheet("QPushButton#"+objectName()+"{background-image: url("+image +");}");
 }

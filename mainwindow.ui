@@ -23,7 +23,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/Resources/line_0.png);</string>
+    <string notr="true">QWidget#centralwidget{border-image: url(:/Resources/line_0.png);}</string>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -51,7 +51,7 @@
      <x>0</x>
      <y>0</y>
      <width>1366</width>
-     <height>23</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
