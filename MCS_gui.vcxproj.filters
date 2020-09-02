@@ -75,9 +75,6 @@
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="powersupply.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="psdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -94,6 +91,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="backend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,9 +113,6 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="powersupply.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="psdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -123,6 +120,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="qscbutton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="backend.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -161,9 +161,6 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Boff_1.png">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="Resources\Boff_2.png">
       <Filter>Resource Files</Filter>
     </None>

@@ -3,7 +3,8 @@
 
 #include <QHBoxLayout>
 
-#include "powersupply.h"
+#include "backend.h"
+#include "interps.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,11 +16,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     //添加后端线程，负责数据采集
     workThread = new QThread;
-    PowerSupply* mypowsupply = new PowerSupply;
-    mypowsupply->moveToThread(workThread);
-    connect(workThread,&QThread::finished,mypowsupply,&QObject::deleteLater);
-    connect(this,&MainWindow::hh,mypowsupply,&PowerSupply::test);
-    connect(mypowsupply,&PowerSupply::st,[&](int nu){interBD_->setmagnet(nu);});
+    Backend* myBackend = new Backend;
+    myBackend->moveToThread(workThread);
+    connect(myBackend, &Backend::dataChange,interPS_,&interps::display_value);
+    //connect(workThread,&QThread::finished,myBackend,&QObject::deleteLater);
     workThread->start();
 }
 

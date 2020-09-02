@@ -15,7 +15,7 @@ public:
     explicit interps(QWidget *parent = nullptr);
     ~interps();
 
-    void display_value(int psId,uint data);
+    void display_value(uint psId,QVariant data);
 
 private slots:
     void on_tabWidget_currentChanged(int index);

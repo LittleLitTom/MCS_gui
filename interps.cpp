@@ -3,6 +3,8 @@
 
 #include <bitset>
 
+#include "utilities.h"
+
 //PS id格式：A-BC-DE-FG
 //A：磁铁类型；BC：磁铁区域段编号；DE：磁铁序号；FG：控制变量
 //A:(1)Q铁 (2)B铁 (3)STX (4)STY
@@ -18,7 +20,9 @@ interps::interps(QWidget *parent) :
     while (*it)
     {
         //将电源item文本存入自定义数据中(后续可能会更新电源item文本)
-        (*it)->setData(0, Qt::UserRole,(*it)->text(0));
+        //自定义数据是QStringList,包含三个Qstring,[1]为电源名称，[2]为电源电流，[3]为电源电压；他们都将在树形目录的item中显示
+        (*it)->setData(0, Qt::UserRole,QStringList((*it)->text(0))<<""<<"");
+
         (*it)->setCheckState(0,Qt::Unchecked);
         (*it)->setFlags(Qt::ItemIsAutoTristate|Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsEnabled);
         it++;
@@ -30,10 +34,10 @@ interps::~interps()
     delete ui;
 }
 
-void interps::display_value(int psId, uint data)
+void interps::display_value(uint psId, QVariant data)
 {
     //电源项
-    //itemAt(0,0):根目录；psId / 100 % 100：磁铁编号；psId / 1000000 % 100：磁铁类型；psId / 10000 % 100：磁铁区域
+    //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100, 磁铁区域: psId / 10000 % 100,  磁铁类型: psId / 1000000 % 100
     auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100)->child(psId / 1000000 % 100)->child(psId / 100 % 100);
 
     //电源控制变量
@@ -47,13 +51,22 @@ void interps::display_value(int psId, uint data)
     //current
     else if (psProperty == 2)
     {
-        float current = data;
-        item->setText(0,"ee");
+        float current = data.toFloat();
+
+        //显示在电源监控界面的左侧条目上
+        auto stringText = item->data(0, Qt::UserRole).toStringList();
+        stringText.at(1).fromStdString("Current: "+std::to_string(current)+"A");
+        item->setText(0,stringText.at(0) + "  " + stringText.at(1)+ "  " +stringText.at(2));
     }
     //voltage
     else if (psProperty == 3)
     {
+        float voltage = data.toFloat();
 
+        //显示在电源监控界面的左侧条目上
+        auto stringText = item->data(0, Qt::UserRole).toStringList();
+        stringText.at(2).fromStdString("Voltage: " + std::to_string(voltage) + "V");
+        item->setText(0, stringText.at(0) + "  " + stringText.at(1) + "  " + stringText.at(2));
     }
     //reset
     else if (psProperty == 4)
@@ -75,7 +88,9 @@ void interps::display_value(int psId, uint data)
     //Bit14、15:电源工作模式(00:直接,01:列表,10:Cycle,11:等待)；
     else if (psProperty == 6)
     {
-        std::bitset<16> status(data);
+        std::bitset<16> status(data.toUInt());
+
+        //显示在电源监控界面的左侧条目上
         QString statusIcon;
         if (status[0] == 0) // 电源状态正常
         {

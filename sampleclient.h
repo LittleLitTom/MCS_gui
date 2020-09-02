@@ -30,6 +30,7 @@
 #include "uaclientsdk.h"
 
 class SampleSubscription;
+class Backend;
 
 using namespace UaClientSdk;
 
@@ -37,7 +38,7 @@ class SampleClient : public UaSessionCallback
 {
     UA_DISABLE_COPY(SampleClient);
 public:
-    SampleClient();
+    SampleClient(Backend*);
     virtual ~SampleClient();
 
     // UaSessionCallback implementation ----------------------------------------------------
@@ -55,6 +56,7 @@ public:
 private:
     UaSession* m_pSession;
     SampleSubscription* m_pSampleSubscription;
+    Backend* parent;
 };
 
 #endif // SAMPLECLIENT_H

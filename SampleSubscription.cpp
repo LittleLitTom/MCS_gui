@@ -2,9 +2,18 @@
 #include "uasubscription.h"
 #include "uasession.h"
 
-SampleSubscription::SampleSubscription()
+#include "backend.h"
+#include "utilities.h"
+
+#include <QtXml>
+#include <QtCharts>
+
+#include <iostream>
+
+SampleSubscription::SampleSubscription(Backend* parent_)
 	:m_pSession(NULL),
-	m_pSubscription(NULL)
+	m_pSubscription(NULL),
+    parent(parent_)
 {
 }
 
@@ -32,8 +41,18 @@ void SampleSubscription::dataChange(OpcUa_UInt32 clientSubscriptionHandle, const
     {
         if (OpcUa_IsGood(dataNotifications[i].Value.StatusCode))
         {
-            UaVariant tempValue = dataNotifications[i].Value.Value;
-            printf("  Variable %d value = %s\n", dataNotifications[i].ClientHandle, tempValue.toString().toUtf8());
+            QVariant tempValue;
+            //UaVariant tm = dataNotifications[i].Value.Value.
+            UaVariant num = dataNotifications[i].Value.Value;
+            num.dataType().identifierNumeric();
+            utilities::OpcVarToQtVar(dataNotifications[i].Value.Value, tempValue);
+            
+            //parent->emitDataChange(num,tempValue);
+
+            std::cout <<"nodeid:"<< num.dataType().identifierNumeric()<<"\n"
+                << "datatype:"<<uint(dataNotifications[i].Value.Value.Datatype)<<"\n"
+                <<"arraytype:"<<uint(dataNotifications[i].Value.Value.ArrayType)<<"\n"
+                <<"hello" << std::endl;
         }
         else
         {
@@ -123,9 +142,20 @@ UaStatus SampleSubscription::createMonitoredIterms()
     UaMonitoredItemCreateResults createResults;
 
     //创建监视项
-    //...
-    //创建监视项
+    itemsToCreate.create(11);
+    for (int i = 0; i < 11; i++)
+    {
+        itemsToCreate[i].ItemToMonitor.AttributeId = OpcUa_Attributes_Value;
+        itemsToCreate[i].ItemToMonitor.NodeId.NamespaceIndex = 2;
+        itemsToCreate[i].ItemToMonitor.NodeId.Identifier.Numeric = 6001+i;
+        itemsToCreate[i].RequestedParameters.ClientHandle = 1;
+        itemsToCreate[i].RequestedParameters.SamplingInterval = 100;
+        itemsToCreate[i].RequestedParameters.QueueSize = 1;
+        itemsToCreate[i].RequestedParameters.DiscardOldest = OpcUa_True;
+        itemsToCreate[i].MonitoringMode = OpcUa_MonitoringMode_Reporting;
+    }
 
+    //创建监视项
     printf("\nAdding monitored items to subscription ...\n");
     result = m_pSubscription->createMonitoredItems(
         serviceSettings,
@@ -158,3 +188,8 @@ UaStatus SampleSubscription::createMonitoredIterms()
     return result;
 }
 
+void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsToCreate)
+{
+    QDomDocument doc;
+
+}

@@ -67,11 +67,11 @@
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <QtInstall>Qt5.15.0</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>charts;core;gui;widgets;xml</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <QtInstall>Qt5.15.0</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>charts;core;gui;widgets;xml</QtModules>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
     <Import Project="$(QtMsBuild)\qt.props" />
@@ -108,7 +108,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>$(OutDir)\MCS_gui.exe</OutputFile>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Link>
     <Midl>
@@ -169,7 +169,7 @@
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
       <OutputFile>$(OutDir)\MCS_gui.exe</OutputFile>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Link>
     <Midl>
@@ -208,7 +208,7 @@
     <ClCompile Include="interps.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
-    <ClCompile Include="powersupply.cpp" />
+    <ClCompile Include="backend.cpp" />
     <ClCompile Include="psdialog.cpp" />
     <ClCompile Include="qpsbutton.cpp" />
     <ClCompile Include="qscbutton.cpp" />
@@ -227,7 +227,7 @@
     </QtMoc>
     <QtMoc Include="mainwindow.h">
     </QtMoc>
-    <QtMoc Include="powersupply.h">
+    <QtMoc Include="backend.h">
     </QtMoc>
     <QtMoc Include="psdialog.h">
     </QtMoc>
@@ -273,7 +273,6 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Boff_1.png" />
     <None Include="Resources\Boff_2.png" />
     <None Include="Resources\Boff_3.png" />
     <None Include="Resources\Boff_4.png" />

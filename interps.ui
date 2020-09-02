@@ -4849,6 +4849,19 @@
            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>B2E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
         </item>
         <item>
          <property name="text">

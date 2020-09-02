@@ -26,11 +26,13 @@
 #include "sampleclient.h"
 #include "uasession.h"
 #include "samplesubscription.h"
+#include "backend.h"
 
-SampleClient::SampleClient()
+SampleClient::SampleClient(Backend* parent_)
 {
     m_pSession = new UaSession();
-    m_pSampleSubscription = new SampleSubscription();
+    m_pSampleSubscription = new SampleSubscription(parent_);
+    parent = parent_;
 }
 
 SampleClient::~SampleClient()
