@@ -57,7 +57,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SampleSubscription.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="accelerater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="backend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dbdetails.cpp">
@@ -87,18 +93,18 @@
     <ClCompile Include="sampleclient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SampleSubscription.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="utilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="backend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SampleSubscription.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <QtMoc Include="accelerater.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="backend.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="dbdetails.h">
@@ -122,9 +128,12 @@
     <QtMoc Include="qscbutton.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="backend.h">
+    <ClInclude Include="sampleclient.h">
       <Filter>Header Files</Filter>
-    </QtMoc>
+    </ClInclude>
+    <ClInclude Include="utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -138,27 +147,26 @@
     <None Include="qMCS_gui_zh_CN.ts">
       <Filter>Translation Files</Filter>
     </None>
-    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="accelerater.ui">
+    <CustomBuild Include="accelerater.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="dbdetails.ui">
+    </CustomBuild>
+    <CustomBuild Include="dbdetails.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="interbd.ui">
+    </CustomBuild>
+    <CustomBuild Include="interbd.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="interps.ui">
+    </CustomBuild>
+    <CustomBuild Include="interps.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="mainwindow.ui">
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="psdialog.ui">
+    </CustomBuild>
+    <CustomBuild Include="psdialog.ui">
       <Filter>Form Files</Filter>
-    </QtUic>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Boff_2.png">
@@ -338,16 +346,5 @@
     <None Include="Resources\qon_4.png">
       <Filter>Resource Files</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sampleclient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SampleSubscription.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="utilities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
