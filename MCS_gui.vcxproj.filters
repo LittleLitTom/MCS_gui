@@ -347,4 +347,7 @@
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="mcsGuiConfig.xml" />
+  </ItemGroup>
 </Project>

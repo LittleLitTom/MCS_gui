@@ -153,7 +153,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>shell32.lib;"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uastackd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uabasecppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uapkicppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uaclientcppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll.dbg\libcryptod.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\xmlparsercppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll.dbg\libxml2d.lib";crypt32.lib;ws2_32.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>shell32.lib;"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uastack.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uabasecpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uapkicpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uaclientcpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll\libcrypto.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\xmlparsercpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll\libxml2.lib";crypt32.lib;ws2_32.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll.dbg;..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll;..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll.dbg;..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll;..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib;..\..\..\..\..\..\openssl\lib;..\..\..\..\..\..\Utils\my_sql\mysql-5.7.25-winx64\lib;..\..\..\..\..\..\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -318,6 +318,9 @@
     <None Include="Resources\qon_2.png" />
     <None Include="Resources\qon_3.png" />
     <None Include="Resources\qon_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="mcsGuiConfig.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

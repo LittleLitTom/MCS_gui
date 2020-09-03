@@ -15,6 +15,7 @@ SampleSubscription::SampleSubscription(Backend* parent_)
 	m_pSubscription(NULL),
     parent(parent_)
 {
+    UaMonitoredItemCreateRequests itemsToCreate;
 }
 
 SampleSubscription::~SampleSubscription()
@@ -42,17 +43,8 @@ void SampleSubscription::dataChange(OpcUa_UInt32 clientSubscriptionHandle, const
         if (OpcUa_IsGood(dataNotifications[i].Value.StatusCode))
         {
             QVariant tempValue;
-            //UaVariant tm = dataNotifications[i].Value.Value.
-            UaVariant num = dataNotifications[i].Value.Value;
-            num.dataType().identifierNumeric();
-            utilities::OpcVarToQtVar(dataNotifications[i].Value.Value, tempValue);
-            
-            //parent->emitDataChange(num,tempValue);
-
-            std::cout <<"nodeid:"<< num.dataType().identifierNumeric()<<"\n"
-                << "datatype:"<<uint(dataNotifications[i].Value.Value.Datatype)<<"\n"
-                <<"arraytype:"<<uint(dataNotifications[i].Value.Value.ArrayType)<<"\n"
-                <<"hello" << std::endl;
+            utilities::OpcVarToQtVar(dataNotifications[i].Value.Value, tempValue);    
+            parent->emitDataChange(dataNotifications[i].ClientHandle,tempValue);
         }
         else
         {
@@ -141,19 +133,8 @@ UaStatus SampleSubscription::createMonitoredIterms()
     UaMonitoredItemCreateRequests itemsToCreate;
     UaMonitoredItemCreateResults createResults;
 
-    //创建监视项
-    itemsToCreate.create(11);
-    for (int i = 0; i < 11; i++)
-    {
-        itemsToCreate[i].ItemToMonitor.AttributeId = OpcUa_Attributes_Value;
-        itemsToCreate[i].ItemToMonitor.NodeId.NamespaceIndex = 2;
-        itemsToCreate[i].ItemToMonitor.NodeId.Identifier.Numeric = 6001+i;
-        itemsToCreate[i].RequestedParameters.ClientHandle = 1;
-        itemsToCreate[i].RequestedParameters.SamplingInterval = 100;
-        itemsToCreate[i].RequestedParameters.QueueSize = 1;
-        itemsToCreate[i].RequestedParameters.DiscardOldest = OpcUa_True;
-        itemsToCreate[i].MonitoringMode = OpcUa_MonitoringMode_Reporting;
-    }
+    //根据xml配置文件构建itemsToCreate
+    buildMonitorItems(itemsToCreate);
 
     //创建监视项
     printf("\nAdding monitored items to subscription ...\n");
@@ -190,6 +171,70 @@ UaStatus SampleSubscription::createMonitoredIterms()
 
 void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsToCreate)
 {
-    QDomDocument doc;
+    //从xml文本中解析OPC UA节点信息用于监控
 
+    //打开xml文件"mcsGuiConfig.xm"，并将其解析到内存QDomDocument doc中
+    QFile xmlFile("mcsGuiConfig.xml");
+
+    if (!xmlFile.open(QFile::ReadOnly))
+    {
+        std::cout<<"error file"<<std::endl;
+        return;
+    }
+    QDomDocument doc;
+    if (!doc.setContent(&xmlFile))
+    {
+        //std::cout<<"error doc"<<std::endl;
+        xmlFile.close();
+        return;
+    }
+    xmlFile.close();
+
+    //获取根节点和子系统
+    QDomElement root = doc.documentElement();
+    QDomNodeList subsystems = root.childNodes();
+    int subsystemNum = subsystems.count();
+    //nu：遍历序号
+    int nu = 0;
+    //nu_all：叶子节点总数(即OPC UA变量个数)
+    int nu_all = 0;
+
+    //计算nu_all，并据此为itemsToCreate申请空间
+    for (int i = 0; i < subsystemNum; i++)
+    {
+        auto controls = subsystems.at(i).childNodes();
+        int controlNum = controls.count();
+        for (int j = 0; j < controlNum; j++)
+        {
+            nu_all = nu_all + controls.at(j).childNodes().count();
+        }
+    }
+    itemsToCreate.create(nu_all);
+
+    for (int i = 0; i < subsystemNum; i++)
+    {
+        auto controls = subsystems.at(i).childNodes();
+        int controlNum = controls.count();
+        for (int j = 0; j < controlNum; j++)
+        {
+            auto properties = controls.at(j).childNodes();
+            int propertyNum = properties.count();
+            for (int k = 0; k < propertyNum; k++)
+            {
+                auto propertyId = properties.at(k).firstChild().toText().data().toUInt();
+
+                itemsToCreate[nu].ItemToMonitor.AttributeId = OpcUa_Attributes_Value;
+                itemsToCreate[nu].ItemToMonitor.NodeId.NamespaceIndex = 2;
+                itemsToCreate[nu].ItemToMonitor.NodeId.Identifier.Numeric = propertyId;
+                itemsToCreate[nu].RequestedParameters.ClientHandle = propertyId;
+                itemsToCreate[nu].RequestedParameters.SamplingInterval = 100;
+                itemsToCreate[nu].RequestedParameters.QueueSize = 1;
+                itemsToCreate[nu].RequestedParameters.DiscardOldest = OpcUa_True;
+                itemsToCreate[nu].MonitoringMode = OpcUa_MonitoringMode_Reporting;
+
+                nu++;
+                //std::cout<<name<<std::endl;
+            }
+        }
+    }
 }

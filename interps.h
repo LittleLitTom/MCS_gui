@@ -22,6 +22,9 @@ private slots:
 
 private:
     Ui::interps *ui;
+
+    //自定义数据。用以存储电源相关信息
+    std::map<uint, QStringList> myPsData;
 };
 
 #endif // INTERPS_H

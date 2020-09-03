@@ -20,7 +20,7 @@ Backend::~Backend()
 }
 
 
-void Backend::emitDataChange(int id, QVariant data)
+void Backend::emitDataChange(uint id, QVariant data)
 {
     emit dataChange(id, data);
 }

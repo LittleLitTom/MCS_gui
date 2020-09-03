@@ -14,10 +14,10 @@ public:
     explicit Backend(QObject *parent = nullptr);
     virtual ~Backend();
 
-    void emitDataChange(int id,QVariant data);
+    void emitDataChange(uint id,QVariant data);
 
 signals:
-    void dataChange(int id,QVariant data);
+    void dataChange(uint id,QVariant data);
 
 private:
     //OPC UA¿Í»§¶Ë

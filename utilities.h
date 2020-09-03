@@ -15,4 +15,5 @@ public:
 	static unsigned int floatToByte(float float_);
 	static float byteToFloat(unsigned int uint_);
 	static void OpcVarToQtVar(const OpcUa_Variant&,QVariant&);
+	static uint psIdToNum(const QString);
 };

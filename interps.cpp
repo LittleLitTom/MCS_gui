@@ -22,7 +22,9 @@ interps::interps(QWidget *parent) :
         //将电源item文本存入自定义数据中(后续可能会更新电源item文本)
         //自定义数据是QStringList,包含三个Qstring,[1]为电源名称，[2]为电源电流，[3]为电源电压；他们都将在树形目录的item中显示
         (*it)->setData(0, Qt::UserRole,QStringList((*it)->text(0))<<""<<"");
-
+        QStringList Tem;
+        Tem << (*it)->text(0) << " " << " ";
+        myPsData[utilities::psIdToNum((*it)->text(0))] = Tem;
         (*it)->setCheckState(0,Qt::Unchecked);
         (*it)->setFlags(Qt::ItemIsAutoTristate|Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsEnabled);
         it++;
@@ -37,12 +39,12 @@ interps::~interps()
 void interps::display_value(uint psId, QVariant data)
 {
     //电源项
-    //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100, 磁铁区域: psId / 10000 % 100,  磁铁类型: psId / 1000000 % 100
-    auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100)->child(psId / 1000000 % 100)->child(psId / 100 % 100);
+    //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100 -1, 磁铁区域: psId / 10000 % 100 -1,  磁铁类型: psId / 1000000 % 100 -1
+    auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100-1)->child(psId / 1000000 % 100-1)->child(psId / 100 % 100 - 1);
 
     //电源控制变量
     int psProperty = psId % 100;
-
+    uint psIdentify = psId / 100 * 100;
     //switch
     if (psProperty == 1)
     {
@@ -52,11 +54,9 @@ void interps::display_value(uint psId, QVariant data)
     else if (psProperty == 2)
     {
         float current = data.toFloat();
-
         //显示在电源监控界面的左侧条目上
-        auto stringText = item->data(0, Qt::UserRole).toStringList();
-        stringText.at(1).fromStdString("Current: "+std::to_string(current)+"A");
-        item->setText(0,stringText.at(0) + "  " + stringText.at(1)+ "  " +stringText.at(2));
+        myPsData[psIdentify][1] = "Current: " + QString::number(current, 10, 3) + "A";
+        item->setText(0, myPsData[psIdentify][0] + "  " + myPsData[psIdentify][1] + "  " + myPsData[psIdentify][2]);
     }
     //voltage
     else if (psProperty == 3)
@@ -64,9 +64,8 @@ void interps::display_value(uint psId, QVariant data)
         float voltage = data.toFloat();
 
         //显示在电源监控界面的左侧条目上
-        auto stringText = item->data(0, Qt::UserRole).toStringList();
-        stringText.at(2).fromStdString("Voltage: " + std::to_string(voltage) + "V");
-        item->setText(0, stringText.at(0) + "  " + stringText.at(1) + "  " + stringText.at(2));
+        myPsData[psIdentify][2] = "Voltage: " + QString::number(voltage, 10, 3) + "V";
+        item->setText(0, myPsData[psIdentify][0] + "  " + myPsData[psIdentify][1] + "  " + myPsData[psIdentify][2]);
     }
     //reset
     else if (psProperty == 4)

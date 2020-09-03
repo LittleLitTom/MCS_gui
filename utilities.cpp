@@ -128,3 +128,89 @@ void utilities::OpcVarToQtVar(const OpcUa_Variant& opcVar, QVariant& qtVar)
 		//´¦Àí´úÂë
 	}
 }
+
+uint utilities::psIdToNum(const QString psId)
+{
+	if (psId.count() < 3 || psId.count()>8)
+	{
+		return 0;
+	}
+	int m, n,p,q = 0;
+	if ((*psId.begin()) == 'Q')
+	{
+		m = 1;
+		p = 1;
+	}
+	else if ((*psId.begin()) == 'B')
+	{
+		m = 2;
+		p = 1;
+	}
+	else if ((*(psId.begin()+2)) == 'X')
+	{
+		m = 3;
+		p = 3;
+	}
+	else if ((*(psId.begin()+2)) == 'Y')
+	{
+		m = 4;
+		p = 3;
+	}
+
+	if ((*(psId.end() - 1)) == 'E')
+	{
+		n = 1;
+		q = 1;
+	}
+	else if ((*(psId.end() - 1)) == '1')
+	{
+		q = 2;
+		if ((*(psId.end() - 2)) == 'S')
+		{
+			n = 2;
+		}
+		else if ((*(psId.end() - 2)) == 'F')
+		{
+			n = 3;
+		}
+	}
+	else if ((*(psId.end() - 1)) == '2')
+	{
+		q = 2;
+		if ((*(psId.end() - 2)) == 'P')
+		{
+			n = 4;
+		}
+		else if ((*(psId.end() - 2)) == 'S')
+		{
+			n = 5;
+		}
+		else if ((*(psId.end() - 2)) == 'G')
+		{
+			n = 6;
+		}
+	}
+	else if ((*(psId.end() - 1)) == '3')
+	{
+		q = 2;
+		if ((*(psId.end() - 2)) == 'P')
+		{
+			n = 7;
+		}
+		else if ((*(psId.end() - 2)) == 'S')
+		{
+			n = 8;
+		}
+		else if ((*(psId.end() - 2)) == 'G')
+		{
+			n = 9;
+		}
+	}
+
+	QString tem;
+	for (auto iter = psId.begin() + p; iter < psId.end() - q; iter++)
+	{
+		tem.append(*iter);
+	}
+	return (100000000+m*1000000+n*10000+tem.toInt()*100);
+}
