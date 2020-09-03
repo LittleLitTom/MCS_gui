@@ -19,7 +19,11 @@ MainWindow::MainWindow(QWidget *parent)
     Backend* myBackend = new Backend;
     myBackend->moveToThread(workThread);
     connect(myBackend, &Backend::dataChange,interPS_,&interps::display_value);
-    //connect(workThread,&QThread::finished,myBackend,&QObject::deleteLater);
+    connect(this, &MainWindow::startAcquisition, myBackend, &Backend::runAcquisition);
+    connect(workThread,&QThread::finished,myBackend,&QObject::deleteLater);
+    //启动采样
+    emit(startAcquisition());
+    //启动工作线程
     workThread->start();
 }
 
@@ -38,9 +42,4 @@ void MainWindow::on_actionDB_triggered()
 void MainWindow::on_actionPower_Sypply_triggered()
 {
     interPS_->show();
-}
-
-void MainWindow::on_pushButton_clicked()
-{
-    emit hh();
 }

@@ -149,26 +149,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="accelerater.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dbdetails.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="interbd.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="interps.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="mainwindow.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="psdialog.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Boff_2.png">
       <Filter>Resource Files</Filter>
     </None>
@@ -349,5 +329,25 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="mcsGuiConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="accelerater.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dbdetails.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="psdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="interbd.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="interps.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

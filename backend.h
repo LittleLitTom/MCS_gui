@@ -14,6 +14,9 @@ public:
     explicit Backend(QObject *parent = nullptr);
     virtual ~Backend();
 
+    //开始数据采集
+    void runAcquisition();
+
     void emitDataChange(uint id,QVariant data);
 
 signals:

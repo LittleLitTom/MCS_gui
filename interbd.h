@@ -16,7 +16,6 @@ public:
     explicit interBD(QWidget *parent = nullptr);
     ~interBD();
 
-    void setmagnet(int);
 private:
     accelerater* accelerater_;
     Ui::interBD *ui;

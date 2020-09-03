@@ -24,10 +24,9 @@ private slots:
 
     void on_actionPower_Sypply_triggered();
 
-    void on_pushButton_clicked();
-
 signals:
-    void hh();
+    void startAcquisition();
+
 private:
     Ui::MainWindow *ui;
     interBD* interBD_;

@@ -15,8 +15,3 @@ interBD::~interBD()
     delete ui;
 }
 
-
-void interBD::setmagnet(int n)
-{
-        accelerater_->changeMe(n);
-}

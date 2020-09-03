@@ -39,15 +39,11 @@ accelerater::~accelerater()
     delete ui;
 }
 
+//与束线状态量"m_beamState"绑定,改变束线状态
 void accelerater::changeWidgetStyle()
 {
     QString image = "QFrame{background-image: url(:/Resources/line_";
     ui->frame->setStyleSheet(image + QString::number(m_beamState)+".png);}");
-}
-
-void accelerater::changeMe(bool fa)
-{
-   ui->Q1E->setProperty("state",fa);
 }
 
 

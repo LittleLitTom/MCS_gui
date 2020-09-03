@@ -15,7 +15,7 @@ SampleSubscription::SampleSubscription(Backend* parent_)
 	m_pSubscription(NULL),
     parent(parent_)
 {
-    UaMonitoredItemCreateRequests itemsToCreate;
+
 }
 
 SampleSubscription::~SampleSubscription()
@@ -43,7 +43,8 @@ void SampleSubscription::dataChange(OpcUa_UInt32 clientSubscriptionHandle, const
         if (OpcUa_IsGood(dataNotifications[i].Value.StatusCode))
         {
             QVariant tempValue;
-            utilities::OpcVarToQtVar(dataNotifications[i].Value.Value, tempValue);    
+            utilities::OpcVarToQtVar(dataNotifications[i].Value.Value, tempValue); 
+            //将OPC UA监视项的变化作为信号发射出去
             parent->emitDataChange(dataNotifications[i].ClientHandle,tempValue);
         }
         else

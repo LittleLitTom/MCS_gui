@@ -71,14 +71,14 @@
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <QtInstall>Qt5.15.0</QtInstall>
-    <QtModules>charts;core;gui;xml</QtModules>
+    <QtModules>charts;core;gui;uitools;xml</QtModules>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
     <Import Project="$(QtMsBuild)\qt.props" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\examples\utilities;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\include;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\inc32;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\xmlparsercpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uapkicpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uaclientcpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uabasecpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uastack;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(IntDir)uic;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\examples\utilities;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\include;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\inc32;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\xmlparsercpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uapkicpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uaclientcpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uabasecpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uastack;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -133,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\xmlparsercpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\examples\utilities;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\include;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\inc32;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uapkicpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uaclientcpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uabasecpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uastack;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(IntDir)uic;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\xmlparsercpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\examples\utilities;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\include;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\inc32;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uapkicpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uaclientcpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uabasecpp;C:\Program Files %28x86%29\UnifiedAutomation\UaSdkCppBundlePubSubEval\include\uastack;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -250,14 +250,6 @@
     <None Include="qMCS_gui_zh_CN.ts" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="accelerater.ui" />
-    <CustomBuild Include="dbdetails.ui" />
-    <CustomBuild Include="interbd.ui" />
-    <CustomBuild Include="interps.ui" />
-    <CustomBuild Include="mainwindow.ui" />
-    <CustomBuild Include="psdialog.ui" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Boff_2.png" />
     <None Include="Resources\Boff_3.png" />
     <None Include="Resources\Boff_4.png" />
@@ -321,6 +313,14 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="mcsGuiConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="accelerater.ui" />
+    <QtUic Include="dbdetails.ui" />
+    <QtUic Include="interbd.ui" />
+    <QtUic Include="interps.ui" />
+    <QtUic Include="mainwindow.ui" />
+    <QtUic Include="psdialog.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
