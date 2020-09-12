@@ -153,19 +153,10 @@ UaStatus SampleClient::disconnect()
     return result;
 }
 
-UaStatus SampleClient::read()
+UaStatus SampleClient::read(UaStatus& result, UaReadValueIds& nodeToRead, UaDataValues& values)
 {
-    UaStatus          result;
     ServiceSettings   serviceSettings;
-    UaReadValueIds    nodeToRead;
-    UaDataValues      values;
     UaDiagnosticInfos diagnosticInfos;
-
-    // Configure one node to read
-    // We read the value of the ServerStatus -> CurrentTime
-    nodeToRead.create(1);
-    nodeToRead[0].AttributeId = OpcUa_Attributes_Value;
-    nodeToRead[0].NodeId.Identifier.Numeric = OpcUaId_Server_ServerStatus_CurrentTime;
 
     printf("\nReading ...\n");
     result = m_pSession->read(
@@ -175,6 +166,7 @@ UaStatus SampleClient::read()
         nodeToRead,
         values,
         diagnosticInfos);
+
 
     if (result.isGood())
     {
@@ -193,28 +185,14 @@ UaStatus SampleClient::read()
         // Service call failed
         printf("Read failed with status %s\n", result.toString().toUtf8());
     }
-
     return result;
 }
 
-UaStatus SampleClient::write()
+UaStatus SampleClient::write(UaStatus& result, UaWriteValues& nodesToWrite,UaStatusCodeArray& results)
 {
-    UaStatus            result;
     ServiceSettings     serviceSettings;
-    UaWriteValues       nodesToWrite;
-    UaStatusCodeArray   results;
     UaDiagnosticInfos   diagnosticInfos;
-    // write all nodes from the configuration
-    UaNodeIdArray nodes;
-    UaVariantArray values;
-    nodesToWrite.create(nodes.length());
-    for (OpcUa_UInt32 i = 0; i < nodes.length(); i++)
-    {
-        nodesToWrite[i].AttributeId = OpcUa_Attributes_Value;
-        OpcUa_NodeId_CopyTo(&nodes[i], &nodesToWrite[i].NodeId);
-        // set value to write
-        OpcUa_Variant_CopyTo(&values[i], &nodesToWrite[i].Value.Value);
-    }
+
     printf("\nWriting...\n");
     result = m_pSession->write(
         serviceSettings,

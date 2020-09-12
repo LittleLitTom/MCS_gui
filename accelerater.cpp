@@ -1,7 +1,6 @@
 #include "accelerater.h"
-#include <QDebug>
-
 #include "ui_accelerater.h"
+
 
 accelerater::accelerater(QWidget *parent) :
     QWidget(parent),
@@ -226,5 +225,4 @@ void accelerater::acceleratorInitialize()
     ui->IC2G3->setProperty("type",3);ui->IC2G3->setProperty("location",1);ui->IC2G3->setProperty("state",false);
     ui->IC3G3->setProperty("type",3);ui->IC3G3->setProperty("location",3);ui->IC3G3->setProperty("state",false);
     ui->IC4G3->setProperty("type",3);ui->IC4G3->setProperty("location",3);ui->IC4G3->setProperty("state",false);
-
 }

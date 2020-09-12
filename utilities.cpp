@@ -129,8 +129,352 @@ void utilities::OpcVarToQtVar(const OpcUa_Variant& opcVar, QVariant& qtVar)
 	}
 }
 
+void utilities::QtVarToOpcVar(const QVariant& qtVar, OpcUa_Variant& opcVar)
+{
+	switch (qtVar.type())
+	{
+	case 1://bool
+		opcVar.Value.Boolean = qtVar.toBool();
+		break;
+	case 2://Int
+		opcVar.Value.Int32 = qtVar.toInt();
+		break;
+	case 3://Uint
+		opcVar.Value.UInt32 = qtVar.toUInt();
+		break;
+	case 4://LongLong
+		opcVar.Value.Int64 = qtVar.toLongLong();
+		break;
+	case 5://ULongLong
+		opcVar.Value.UInt64 = qtVar.toULongLong();
+		break;
+	case 6://Double
+		opcVar.Value.Double = qtVar.toDouble();
+		break;
+	case 38://Float
+		opcVar.Value.Float = qtVar.toFloat();
+		break;
+	case 9://QVariantList
+		auto varList = qtVar.toList();
+		opcVar.Value.Array.Length = varList.count();
+		opcVar.ArrayType = 1;
+		switch (varList[0].type())
+		{
+		case 1://bool
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.BooleanArray[i] = qtVar.toList()[i].toBool();
+			}
+			break;
+		case 2://Int
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.Int32Array[i] = qtVar.toList()[i].toInt();
+			}
+			break;
+		case 3://Uint
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.UInt32Array[i] = qtVar.toList()[i].toUInt();
+			}
+			break;
+		case 4://LongLong
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.Int64Array[i] = qtVar.toList()[i].toLongLong();
+			}
+			break;
+		case 5://ULongLong
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.UInt64Array[i] = qtVar.toList()[i].toULongLong();
+			}
+			break;
+		case 6://Double
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.DoubleArray[i] = qtVar.toList()[i].toDouble();
+			}
+			break;
+		case 38://Float
+			for (int i = 0; i < varList.count(); i++)
+			{
+				opcVar.Value.Array.Value.FloatArray[i] = qtVar.toList()[i].toFloat();
+			}
+			break;
+		}
+	}
+}
+
+void utilities::UaVarToQtVar(const UaVariant& UaVar, QVariant& QtVar)
+{
+	if (UaVar.isArray())//如果UaVariant是数组形式
+	{
+		QVariantList ret;
+		switch (UaVar.type())
+		{
+		case 1://bool
+		{
+			UaBoolArray uaSpecific;
+			UaVar.toBoolArray(uaSpecific);
+
+			for (int i=0;i<UaVar.arraySize();i++)
+			{
+				ret.push_back(QVariant(static_cast<bool>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 6://Int32
+		{
+			UaInt32Array uaSpecific;
+			UaVar.toInt32Array(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<int>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 7://Uint32
+		{
+			UaUInt32Array uaSpecific;
+			UaVar.toUInt32Array(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<uint>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 8://Int64
+		{
+			UaInt64Array uaSpecific;
+			UaVar.toInt64Array(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<long long>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 9://Uint64
+		{
+			UaUInt64Array uaSpecific;
+			UaVar.toUInt64Array(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<unsigned long long>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 10://float
+		{
+			UaFloatArray uaSpecific;
+			UaVar.toFloatArray(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<float>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		case 11://double
+		{
+			UaDoubleArray uaSpecific;
+			UaVar.toDoubleArray(uaSpecific);
+
+			for (int i = 0; i < UaVar.arraySize(); i++)
+			{
+				ret.push_back(QVariant(static_cast<double>(uaSpecific[i])));
+			}
+			QtVar.setValue<QVariantList>(ret);
+		}
+			break;
+		}
+	}
+	else//如果UaVariant是标量形式
+	{
+		switch (UaVar.type())
+		{
+		case 1://bool
+		{
+			boolean ret;
+			UaVar.toBool(ret);
+			QtVar.setValue<bool>(ret);
+		}
+		break;
+		case 6://Int32
+		{
+			OpcUa_Int32 ret;
+			UaVar.toInt32(ret);
+			QtVar.setValue<int>(ret);
+		}
+		break;
+		case 7://Uint32
+		{
+			OpcUa_UInt32 ret;
+			UaVar.toUInt32(ret);
+			QtVar.setValue<uint>(ret);
+		}
+		break;
+		case 8://Int64
+		{	OpcUa_Int64 ret;
+			UaVar.toInt64(ret);
+			QtVar.setValue<INT64>(ret);
+		}
+		break;
+		case 9://Uint64
+		{
+			OpcUa_UInt64 ret;
+			UaVar.toUInt64(ret);
+			QtVar.setValue<UINT64>(ret);
+		}
+		break;
+		case 10://float
+		{
+			OpcUa_Float ret;
+			UaVar.toFloat(ret);
+			QtVar.setValue<float>(ret);
+		}
+		break;
+		case 11://double
+		{
+			OpcUa_Double ret;
+			UaVar.toDouble(ret);
+			QtVar.setValue<double>(ret);
+		}
+		break;
+		}
+	}
+}
+
+void utilities::QtVarToUaVar(const QVariant& QtVar, UaVariant& UaVar)
+{
+	switch (QtVar.type())
+	{
+	case 1://bool
+		UaVar.setBool(QtVar.toBool());
+		break;
+	case 2://int
+		UaVar.setInt32(QtVar.toInt());
+		break;
+	case 3://Uint
+		UaVar.setUInt32(QtVar.toUInt());
+		break;
+	case 4://LongLong
+		UaVar.setInt64(QtVar.toLongLong());
+		break;
+	case 5://ULongLong
+		UaVar.setUInt64(QtVar.toULongLong());
+		break;
+	case 6://Double
+		UaVar.setDouble(QtVar.toDouble());
+		break;
+	case 9://QvariantList
+		{
+		auto varList = QtVar.toList();
+		if (varList[0].type() == 1)//bool
+		{
+			UaBoolArray tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toBool();
+				i++;
+			}
+			UaVar.setBoolArray(tem);
+		}
+		else if (varList[0].type() == 2)//int
+		{
+			UaInt32Array tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toInt();
+				i++;
+			}
+			UaVar.setInt32Array(tem);
+		}
+		else if (varList[0].type() == 3)//Uint
+		{
+			UaUInt32Array tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toUInt();
+				i++;
+			}
+			UaVar.setUInt32Array(tem);
+		}
+		else if (varList[0].type() == 4)//LongLong
+		{
+			UaInt64Array tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toLongLong();
+				i++;
+			}
+			UaVar.setInt64Array(tem);
+		}
+		else if (varList[0].type() == 5)//ULongLong
+		{
+			UaUInt64Array tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toULongLong();
+				i++;
+			}
+			UaVar.setUInt64Array(tem);
+		}
+		else if (varList[0].type() == 6)//Double
+		{
+			UaDoubleArray tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toDouble();
+				i++;
+			}
+			UaVar.setDoubleArray(tem);
+		}
+		else if (varList[0].type() == 38)//float
+		{
+			UaFloatArray tem;
+			tem.create(varList.count());
+			int i = 0;
+			for (auto var : varList)
+			{
+				tem[i] = var.toFloat();
+				i++;
+			}
+			UaVar.setFloatArray(tem);
+		}
+		}
+		break;
+	case 38://float
+		UaVar.setFloat(QtVar.toFloat());
+		break;
+	}
+}
+
 uint utilities::psIdToNum(const QString psId)
 {
+	//非TreeWidget叶子节点，此时不能够构成电源Id
 	if (psId.count() < 3 || psId.count()>8)
 	{
 		return 0;
@@ -213,4 +557,10 @@ uint utilities::psIdToNum(const QString psId)
 		tem.append(*iter);
 	}
 	return (100000000+m*1000000+n*10000+tem.toInt()*100);
+}
+
+uint utilities::scIdToNum(const QString)
+{
+
+	return uint();
 }

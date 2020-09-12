@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1366</width>
-    <height>768</height>
+    <width>1654</width>
+    <height>876</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -18,18 +18,1888 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout" columnstretch="4,6">
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
+    <item row="0" column="0">
+     <widget class="QTreeWidget" name="treeWidget">
+      <column>
+       <property name="text">
+        <string>电源树</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="background">
+        <color>
+         <red>0</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>Power supplies</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="checkState">
+         <enum>Unchecked</enum>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q7E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q8E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q9E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q10E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q11E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX3E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY2E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY3E</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>S1</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="checkState">
+         <enum>Unchecked</enum>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q7S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="checkState">
+          <enum>Unchecked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1S1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>F1</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1F1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>P2</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="background">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>85</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1P2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>S2</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q7S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1S2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>G2</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B3G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY2G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY3G2</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>P3</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1P3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>S3</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q7S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1S3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>G3</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>Q1G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q2G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q3G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q4G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q5G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Q6G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>B1G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B2G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B3G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STX</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STX1G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STX2G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>STY</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+         </property>
+         <item>
+          <property name="text">
+           <string>STY1G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY2G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STY3G3</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </item>
+        </item>
+       </item>
+      </item>
+     </widget>
+    </item>
     <item row="0" column="1">
      <widget class="QFrame" name="frame">
       <property name="frameShape">
@@ -38,7 +1908,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
+      <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0">
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -62,13 +1932,13 @@
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="tab">
+         <widget class="QWidget" name="Base">
           <attribute name="title">
            <string>基本监控</string>
           </attribute>
-          <layout class="QGridLayout" name="gridLayout_11" rowstretch="0,2,0,0">
+          <layout class="QGridLayout" name="gridLayout_19">
            <item row="0" column="0">
-            <widget class="QLabel" name="label_48">
+            <widget class="QLabel" name="PSId">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -87,37 +1957,66 @@
             </widget>
            </item>
            <item row="1" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_11">
-             <item>
-              <widget class="QFrame" name="frame_3">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="frame_4">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>动态图</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QFrame" name="frame_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QFrame" name="frame_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QGroupBox" name="groupBox_2">
+            <widget class="QGroupBox" name="StatusDisplay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title">
               <string>状态显示 </string>
              </property>
              <layout class="QGridLayout" name="gridLayout_13">
               <item row="0" column="0">
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <layout class="QHBoxLayout" name="SwitchLayout">
                 <item>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
@@ -135,7 +2034,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_44">
+                 <widget class="QLabel" name="Switch">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -150,7 +2049,7 @@
                </layout>
               </item>
               <item row="0" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <layout class="QHBoxLayout" name="ModeLayout">
                 <item>
                  <widget class="QLabel" name="label_5">
                   <property name="font">
@@ -168,7 +2067,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_43">
+                 <widget class="QLabel" name="Mode">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -180,7 +2079,7 @@
                </layout>
               </item>
               <item row="0" column="2">
-               <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <layout class="QHBoxLayout" name="CurrentRBlaout">
                 <item>
                  <widget class="QLabel" name="label">
                   <property name="font">
@@ -198,7 +2097,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_6">
+                 <widget class="QLabel" name="CurrentRB">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -210,7 +2109,7 @@
                </layout>
               </item>
               <item row="0" column="3">
-               <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <layout class="QHBoxLayout" name="VoltageRBlaout">
                 <item>
                  <widget class="QLabel" name="label_2">
                   <property name="font">
@@ -228,7 +2127,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_7">
+                 <widget class="QLabel" name="VoltageRB">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -240,7 +2139,7 @@
                </layout>
               </item>
               <item row="1" column="0" colspan="4">
-               <layout class="QHBoxLayout" name="horizontalLayout">
+               <layout class="QHBoxLayout" name="StatusLayout">
                 <item>
                  <widget class="QLabel" name="label_3">
                   <property name="font">
@@ -258,7 +2157,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_9">
+                 <widget class="QLabel" name="Sbit1">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -271,7 +2170,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_8">
+                 <widget class="QLabel" name="Sbit2">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -284,7 +2183,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_10">
+                 <widget class="QLabel" name="Sbit3">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -297,7 +2196,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_11">
+                 <widget class="QLabel" name="Sbit4">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -310,7 +2209,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_13">
+                 <widget class="QLabel" name="Sbit5">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -323,7 +2222,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_12">
+                 <widget class="QLabel" name="Sbit6">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -336,7 +2235,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_17">
+                 <widget class="QLabel" name="Sbit7">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -349,7 +2248,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_16">
+                 <widget class="QLabel" name="Sbit8">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -362,7 +2261,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_15">
+                 <widget class="QLabel" name="Sbit9">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -375,7 +2274,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_14">
+                 <widget class="QLabel" name="Sbit10">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -388,7 +2287,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_19">
+                 <widget class="QLabel" name="Sbit11">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -401,7 +2300,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_39">
+                 <widget class="QLabel" name="Sbit12">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -414,7 +2313,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_18">
+                 <widget class="QLabel" name="Sbit13">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -427,7 +2326,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_40">
+                 <widget class="QLabel" name="Sbit14">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -440,7 +2339,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_41">
+                 <widget class="QLabel" name="Sbit15">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -453,7 +2352,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_42">
+                 <widget class="QLabel" name="Sbit16">
                   <property name="frameShape">
                    <enum>QFrame::WinPanel</enum>
                   </property>
@@ -472,91 +2371,75 @@
            </item>
            <item row="3" column="0">
             <widget class="QGroupBox" name="groupBox_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title">
               <string>基本设置</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_12">
+             <layout class="QGridLayout" name="gridLayout_11">
               <item row="0" column="0">
-               <layout class="QHBoxLayout" name="horizontalLayout_8">
-                <item>
-                 <widget class="QLabel" name="label_46">
-                  <property name="font">
-                   <font>
-                    <family>宋体</family>
-                    <pointsize>14</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>电流开关：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_5">
-                  <property name="text">
-                   <string>开</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_6">
-                  <property name="text">
-                   <string>关</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QGroupBox" name="groupBox_2">
+                <property name="title">
+                 <string>开关</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_15">
+                 <item row="0" column="0">
+                  <widget class="QRadioButton" name="radioButton_5">
+                   <property name="text">
+                    <string>开</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QRadioButton" name="radioButton_6">
+                   <property name="text">
+                    <string>关</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
               <item row="0" column="1" colspan="2">
-               <layout class="QHBoxLayout" name="horizontalLayout_7">
-                <item>
-                 <widget class="QLabel" name="label_47">
-                  <property name="font">
-                   <font>
-                    <family>宋体</family>
-                    <pointsize>14</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>电源模式：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton">
-                  <property name="text">
-                   <string>DC</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_2">
-                  <property name="text">
-                   <string>List</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_4">
-                  <property name="text">
-                   <string>Cycle</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_3">
-                  <property name="text">
-                   <string>Idle</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QGroupBox" name="groupBox_6">
+                <property name="title">
+                 <string>模式</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_16">
+                 <item row="0" column="0">
+                  <widget class="QRadioButton" name="radioButton">
+                   <property name="text">
+                    <string>DC</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QRadioButton" name="radioButton_4">
+                   <property name="text">
+                    <string>Cycle</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QRadioButton" name="radioButton_2">
+                   <property name="text">
+                    <string>List</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QRadioButton" name="radioButton_3">
+                   <property name="text">
+                    <string>Idle</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
               <item row="0" column="3">
                <widget class="QPushButton" name="pushButton_5">
@@ -577,143 +2460,121 @@
                </widget>
               </item>
               <item row="1" column="0" colspan="2">
-               <layout class="QHBoxLayout" name="horizontalLayout_9">
-                <item>
-                 <widget class="QLabel" name="label_45">
-                  <property name="font">
-                   <font>
-                    <family>宋体</family>
-                    <pointsize>14</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>电流设置：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QDoubleSpinBox" name="doubleSpinBox">
-                  <property name="font">
-                   <font>
-                    <family>Times New Roman</family>
-                    <pointsize>14</pointsize>
-                   </font>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::DefaultContextMenu</enum>
-                  </property>
-                  <property name="wrapping">
-                   <bool>false</bool>
-                  </property>
-                  <property name="frame">
-                   <bool>true</bool>
-                  </property>
-                  <property name="readOnly">
-                   <bool>false</bool>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::NoButtons</enum>
-                  </property>
-                  <property name="accelerated">
-                   <bool>false</bool>
-                  </property>
-                  <property name="suffix">
-                   <string/>
-                  </property>
-                  <property name="decimals">
-                   <number>4</number>
-                  </property>
-                  <property name="maximum">
-                   <double>999.999900000000025</double>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton">
-                  <property name="text">
-                   <string>设置</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_2">
-                  <property name="text">
-                   <string>回读</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QGroupBox" name="groupBox_9">
+                <property name="title">
+                 <string>电流设置</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_17">
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="CurrentSet">
+                   <property name="text">
+                    <string>设置</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QPushButton" name="CurrentGet">
+                   <property name="text">
+                    <string>回读</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2" colspan="2">
+                  <widget class="QDoubleSpinBox" name="Current">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="contextMenuPolicy">
+                    <enum>Qt::DefaultContextMenu</enum>
+                   </property>
+                   <property name="wrapping">
+                    <bool>false</bool>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                   <property name="readOnly">
+                    <bool>false</bool>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::NoButtons</enum>
+                   </property>
+                   <property name="accelerated">
+                    <bool>false</bool>
+                   </property>
+                   <property name="suffix">
+                    <string/>
+                   </property>
+                   <property name="decimals">
+                    <number>4</number>
+                   </property>
+                   <property name="maximum">
+                    <double>999.999900000000025</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
               <item row="1" column="2" colspan="2">
-               <layout class="QHBoxLayout" name="horizontalLayout_10">
-                <item>
-                 <widget class="QLabel" name="label_51">
-                  <property name="font">
-                   <font>
-                    <family>宋体</family>
-                    <pointsize>14</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>电流最大值设置：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
-                  <property name="font">
-                   <font>
-                    <family>Times New Roman</family>
-                    <pointsize>14</pointsize>
-                   </font>
-                  </property>
-                  <property name="wrapping">
-                   <bool>false</bool>
-                  </property>
-                  <property name="frame">
-                   <bool>true</bool>
-                  </property>
-                  <property name="readOnly">
-                   <bool>false</bool>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::NoButtons</enum>
-                  </property>
-                  <property name="accelerated">
-                   <bool>false</bool>
-                  </property>
-                  <property name="suffix">
-                   <string/>
-                  </property>
-                  <property name="decimals">
-                   <number>4</number>
-                  </property>
-                  <property name="maximum">
-                   <double>999.999900000000025</double>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_3">
-                  <property name="text">
-                   <string>设置</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_4">
-                  <property name="text">
-                   <string>回读</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QGroupBox" name="groupBox_10">
+                <property name="title">
+                 <string>电压设置</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_18">
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="CurrentMaxSet">
+                   <property name="text">
+                    <string>设置</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="CurrentMaxGet">
+                   <property name="text">
+                    <string>回读</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="2">
+                  <widget class="QDoubleSpinBox" name="CurrentMax">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="wrapping">
+                    <bool>false</bool>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                   <property name="readOnly">
+                    <bool>false</bool>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::NoButtons</enum>
+                   </property>
+                   <property name="accelerated">
+                    <bool>false</bool>
+                   </property>
+                   <property name="suffix">
+                    <string/>
+                   </property>
+                   <property name="decimals">
+                    <number>4</number>
+                   </property>
+                   <property name="maximum">
+                    <double>999.999900000000025</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -729,8 +2590,8 @@
             <rect>
              <x>20</x>
              <y>10</y>
-             <width>251</width>
-             <height>661</height>
+             <width>331</width>
+             <height>671</height>
             </rect>
            </property>
            <property name="frameShape">
@@ -744,7 +2605,7 @@
              <rect>
               <x>10</x>
               <y>10</y>
-              <width>231</width>
+              <width>301</width>
               <height>531</height>
              </rect>
             </property>
@@ -759,8 +2620,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>216</width>
-               <height>1562</height>
+               <width>285</width>
+               <height>1762</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_3">
@@ -3557,7 +5418,7 @@
             <rect>
              <x>370</x>
              <y>150</y>
-             <width>301</width>
+             <width>431</width>
              <height>41</height>
             </rect>
            </property>
@@ -4174,2150 +6035,246 @@
           <attribute name="title">
            <string>批量设置</string>
           </attribute>
-          <widget class="QGroupBox" name="groupBox_4">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>40</y>
-             <width>204</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="title">
-            <string>批量开关</string>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_6">
-            <item row="0" column="0">
-             <widget class="QRadioButton" name="radioButton_7">
-              <property name="text">
-               <string>On</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QRadioButton" name="radioButton_8">
-              <property name="text">
-               <string>OFF</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0" colspan="2">
-             <widget class="QPushButton" name="pushButton_26">
-              <property name="text">
-               <string>执行</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QGroupBox" name="groupBox_5">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>150</y>
-             <width>201</width>
-             <height>77</height>
-            </rect>
-           </property>
-           <property name="title">
-            <string>批量模式设置</string>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_9">
-            <item row="0" column="0">
-             <widget class="QRadioButton" name="radioButton_9">
-              <property name="text">
-               <string>DC</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QRadioButton" name="radioButton_10">
-              <property name="text">
-               <string>List</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <widget class="QRadioButton" name="radioButton_15">
-              <property name="text">
-               <string>Cycle</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="3">
-             <widget class="QRadioButton" name="radioButton_16">
-              <property name="text">
-               <string>Idle</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0" colspan="4">
-             <widget class="QPushButton" name="pushButton_30">
-              <property name="text">
-               <string>执行</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QGroupBox" name="groupBox_7">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>360</y>
-             <width>271</width>
-             <height>171</height>
-            </rect>
-           </property>
-           <property name="title">
-            <string>批量设置电流</string>
-           </property>
-           <property name="flat">
-            <bool>false</bool>
-           </property>
-           <property name="checkable">
-            <bool>false</bool>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="0">
-             <widget class="QToolBox" name="toolBox">
-              <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Plain</enum>
-              </property>
-              <property name="currentIndex">
-               <number>0</number>
-              </property>
-              <widget class="QWidget" name="page">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>251</width>
-                 <height>87</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>直接设置</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_8">
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_25">
-                  <property name="font">
-                   <font>
-                    <family>宋体</family>
-                    <pointsize>14</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>电源设置值：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QDoubleSpinBox" name="List_51">
-                  <property name="font">
-                   <font>
-                    <family>Times New Roman</family>
-                    <pointsize>14</pointsize>
-                   </font>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::DefaultContextMenu</enum>
-                  </property>
-                  <property name="wrapping">
-                   <bool>false</bool>
-                  </property>
-                  <property name="frame">
-                   <bool>true</bool>
-                  </property>
-                  <property name="readOnly">
-                   <bool>false</bool>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::NoButtons</enum>
-                  </property>
-                  <property name="accelerated">
-                   <bool>false</bool>
-                  </property>
-                  <property name="suffix">
-                   <string/>
-                  </property>
-                  <property name="decimals">
-                   <number>4</number>
-                  </property>
-                  <property name="maximum">
-                   <double>999.999900000000025</double>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0" colspan="2">
-                 <widget class="QPushButton" name="pushButton_33">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
-                  <property name="text">
-                   <string>执行</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-              <widget class="QWidget" name="page_2">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>185</width>
-                 <height>83</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>从数据库导入</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_7">
-                <item row="0" column="0">
-                 <widget class="QCommandLinkButton" name="commandLinkButton">
-                  <property name="text">
-                   <string>从数据库导入</string>
-                  </property>
-                  <property name="autoDefault">
-                   <bool>false</bool>
-                  </property>
-                  <property name="default">
-                   <bool>false</bool>
-                  </property>
-                  <property name="description">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QPushButton" name="pushButton_29">
-                  <property name="text">
-                   <string>执行</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QGroupBox" name="groupBox_8">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>250</y>
-             <width>201</width>
-             <height>71</height>
-            </rect>
-           </property>
-           <property name="title">
-            <string>批量归一化</string>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_10">
-            <item row="0" column="0">
-             <widget class="QPushButton" name="pushButton_32">
-              <property name="text">
-               <string>执行</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>批量开关</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton_7">
+                <property name="text">
+                 <string>On</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="radioButton_8">
+                <property name="text">
+                 <string>OFF</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_26">
+                <property name="text">
+                 <string>执行</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="title">
+              <string>批量模式设置</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton_9">
+                <property name="text">
+                 <string>DC</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="radioButton_10">
+                <property name="text">
+                 <string>List</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QRadioButton" name="radioButton_15">
+                <property name="text">
+                 <string>Cycle</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QRadioButton" name="radioButton_16">
+                <property name="text">
+                 <string>Idle</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="4">
+               <widget class="QPushButton" name="pushButton_30">
+                <property name="text">
+                 <string>执行</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QGroupBox" name="groupBox_8">
+             <property name="title">
+              <string>批量归一化</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_32">
+                <property name="text">
+                 <string>执行</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="title">
+              <string>批量设置电流</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QToolBox" name="toolBox">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="page">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>222</width>
+                   <height>73</height>
+                  </rect>
+                 </property>
+                 <attribute name="label">
+                  <string>直接设置</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_8">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_25">
+                    <property name="font">
+                     <font>
+                      <family>宋体</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>电源设置值：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QDoubleSpinBox" name="List_51">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>14</pointsize>
+                     </font>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::DefaultContextMenu</enum>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="frame">
+                     <bool>true</bool>
+                    </property>
+                    <property name="readOnly">
+                     <bool>false</bool>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::NoButtons</enum>
+                    </property>
+                    <property name="accelerated">
+                     <bool>false</bool>
+                    </property>
+                    <property name="suffix">
+                     <string/>
+                    </property>
+                    <property name="decimals">
+                     <number>4</number>
+                    </property>
+                    <property name="maximum">
+                     <double>999.999900000000025</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton_33">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>执行</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>930</width>
+                   <height>420</height>
+                  </rect>
+                 </property>
+                 <attribute name="label">
+                  <string>从数据库导入</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_7">
+                  <item row="0" column="0">
+                   <widget class="QCommandLinkButton" name="commandLinkButton">
+                    <property name="text">
+                     <string>从数据库导入</string>
+                    </property>
+                    <property name="autoDefault">
+                     <bool>false</bool>
+                    </property>
+                    <property name="default">
+                     <bool>false</bool>
+                    </property>
+                    <property name="description">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="pushButton_29">
+                    <property name="text">
+                     <string>执行</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QTreeWidget" name="treeWidget">
-      <column>
-       <property name="text">
-        <string>电源树</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="background">
-        <color>
-         <red>0</red>
-         <green>170</green>
-         <blue>255</blue>
-        </color>
-       </property>
-       <property name="foreground">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>255</blue>
-         </color>
-        </brush>
-       </property>
-      </column>
-      <item>
-       <property name="text">
-        <string>Power supplies</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="flags">
-        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-       </property>
-       <item>
-        <property name="text">
-         <string>E</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="checkState">
-         <enum>Unchecked</enum>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q7E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q8E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q9E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q10E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q11E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX3E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY2E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY3E</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>S1</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="checkState">
-         <enum>Unchecked</enum>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q7S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="checkState">
-          <enum>Unchecked</enum>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1S1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>F1</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1F1</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>P2</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="background">
-          <brush brushstyle="NoBrush">
-           <color alpha="255">
-            <red>85</red>
-            <green>255</green>
-            <blue>255</blue>
-           </color>
-          </brush>
-         </property>
-         <property name="foreground">
-          <brush brushstyle="NoBrush">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1P2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>S2</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q7S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1S2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>G2</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B3G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY2G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY3G2</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>P3</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1P3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>S3</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q7S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1S3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>G3</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="flags">
-         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-        </property>
-        <item>
-         <property name="text">
-          <string>Q</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>Q1G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q2G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q3G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q4G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q5G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Q6G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>B</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>B1G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B2G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B3G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STX</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STX1G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STX2G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>STY</string>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="flags">
-          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-         </property>
-         <item>
-          <property name="text">
-           <string>STY1G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY2G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>STY3G3</string>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </item>
-        </item>
-       </item>
-      </item>
      </widget>
     </item>
    </layout>
@@ -6327,8 +6284,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1366</width>
-     <height>22</height>
+     <width>1654</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -6395,21 +6352,8 @@
   <tabstop>List_48</tabstop>
   <tabstop>List_49</tabstop>
   <tabstop>List_50</tabstop>
-  <tabstop>pushButton</tabstop>
   <tabstop>treeWidget</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>doubleSpinBox</tabstop>
-  <tabstop>radioButton_5</tabstop>
-  <tabstop>radioButton_2</tabstop>
-  <tabstop>radioButton</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>radioButton_6</tabstop>
-  <tabstop>radioButton_4</tabstop>
   <tabstop>scrollArea</tabstop>
-  <tabstop>doubleSpinBox_2</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>radioButton_3</tabstop>
-  <tabstop>pushButton_2</tabstop>
  </tabstops>
  <resources/>
  <connections/>

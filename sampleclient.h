@@ -48,8 +48,8 @@ public:
     // OPC UA service calls
     UaStatus connect();
     UaStatus disconnect();
-    UaStatus read();
-    UaStatus write();
+    UaStatus read(UaStatus&, UaReadValueIds&, UaDataValues&);
+    UaStatus write(UaStatus&, UaWriteValues&, UaStatusCodeArray&);
     UaStatus subscribe();
     UaStatus unsubscribe();
 

@@ -1,13 +1,12 @@
 #include "interps.h"
 #include "ui_interps.h"
-
 #include <bitset>
-
 #include "utilities.h"
 
-//PS id格式：A-BC-DE-FG
-//A：磁铁类型；BC：磁铁区域段编号；DE：磁铁序号；FG：控制变量
-//A:(1)Q铁 (2)B铁 (3)STX (4)STY
+//PS id格式：MN-XA-BC-DE-FG
+//MN：子系统代号，XA：磁铁类型，BC：磁铁区域段编号，DE：磁铁序号，FG：控制变量
+//磁铁子系统：01，子系统数 < 20
+//XA:(1)Q铁 (2)B铁 (3)STX (4)STY
 
 interps::interps(QWidget *parent) :
     QMainWindow(parent),
@@ -15,20 +14,28 @@ interps::interps(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //界面初始化时,默认选中电源Q1E
+    currentPsName = "Q1E";
+    currentPsId = utilities::psIdToNum(currentPsName);
+    ui->PSId->setText("电源编号: " + currentPsName + "    Id: " + QString::number(currentPsId));
+    
+
     //为树型目录的元素加入选择框，并设置为不可选状态
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it)
     {
         //将电源item文本存入自定义数据中(后续可能会更新电源item文本)
         //自定义数据是QStringList,包含三个Qstring,[1]为电源名称，[2]为电源电流，[3]为电源电压；他们都将在树形目录的item中显示
-        (*it)->setData(0, Qt::UserRole,QStringList((*it)->text(0))<<""<<"");
         QStringList Tem;
         Tem << (*it)->text(0) << " " << " ";
         myPsData[utilities::psIdToNum((*it)->text(0))] = Tem;
+
         (*it)->setCheckState(0,Qt::Unchecked);
         (*it)->setFlags(Qt::ItemIsAutoTristate|Qt::ItemIsSelectable|Qt::ItemIsDragEnabled|Qt::ItemIsDropEnabled|Qt::ItemIsEnabled);
         it++;
     }
+    //信号与槽：用于树形目电源条目的选择
+    connect(ui->treeWidget, &QTreeWidget::itemActivated,this,&interps::onTreeItemActive);
 }
 
 interps::~interps()
@@ -41,10 +48,12 @@ void interps::display_value(uint psId, QVariant data)
     //电源项
     //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100 -1, 磁铁区域: psId / 10000 % 100 -1,  磁铁类型: psId / 1000000 % 100 -1
     auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100-1)->child(psId / 1000000 % 100-1)->child(psId / 100 % 100 - 1);
-
+    
     //电源控制变量
     int psProperty = psId % 100;
+    //电源Id
     uint psIdentify = psId / 100 * 100;
+
     //switch
     if (psProperty == 1)
     {
@@ -54,6 +63,7 @@ void interps::display_value(uint psId, QVariant data)
     else if (psProperty == 2)
     {
         float current = data.toFloat();
+
         //显示在电源监控界面的左侧条目上
         myPsData[psIdentify][1] = "Current: " + QString::number(current, 10, 3) + "A";
         item->setText(0, myPsData[psIdentify][0] + "  " + myPsData[psIdentify][1] + "  " + myPsData[psIdentify][2]);
@@ -195,6 +205,42 @@ void interps::display_value(uint psId, QVariant data)
     }
 }
 
+//回收信号(read结果),并在右端界面显示
+void interps::process_read_results(QList<uint>ids, QList<QVariant>datas, QList<int>results)
+{
+    int i = 0;
+    for (auto id : ids)
+    {
+        if (id == currentPsId + 7)//currentMax
+        {
+            ui->CurrentMax->setValue(datas.at(i).toDouble());
+        }
+        else if (id = currentPsId + 9)//current
+        {
+            ui->Current->setValue(datas.at(i).toDouble());
+        }
+        i++;
+    }
+}
+
+//回收信号(write结果)，并处理
+void interps::process_write_results(QList<uint> ids, QList<int> results)
+{
+    //......
+}
+
+//树形目切换电源
+void interps::onTreeItemActive(QTreeWidgetItem* item, int column)
+{
+    //使用split函数以" "符将QString切分，得PSname
+    auto name = item->text(column).split(" ")[0];
+    auto id = utilities::psIdToNum(name);
+    currentPsName = id ? name : currentPsName;
+    currentPsId = id ? id : currentPsId;
+
+    ui->PSId->setText("电源编号: " + currentPsName + "    Id: " + QString::number(currentPsId));
+}
+
 
 void interps::on_tabWidget_currentChanged(int index)
 {
@@ -216,4 +262,39 @@ void interps::on_tabWidget_currentChanged(int index)
             it++;
         }
     }
+}
+
+//设置电流
+void interps::on_CurrentSet_clicked()
+{
+    QList<uint> ids;
+    QList<QVariant> datas;
+    //currentSet的偏移量为9，偏移量定义详见电源文档或identifierGenerator工程
+    ids.append(currentPsId + 9);
+    datas.append(QVariant(float(ui->Current->value())));
+    emit writeNodes(ids,datas);
+}
+//回读电流设置值
+void interps::on_CurrentGet_clicked()
+{
+    QList<uint> ids;
+    ids.append(currentPsId + 9);
+    emit readNodes(ids);
+}
+//设置电流最大值
+void interps::on_CurrentMaxSet_clicked()
+{
+    QList<uint> ids;
+    QList<QVariant> datas;
+    //currentMax的偏移量为7，偏移量定义详见电源文档或identifierGenerator工程
+    ids.append(currentPsId + 7);
+    datas.append(QVariant(float(ui->Current->value())));
+    emit writeNodes(ids, datas);
+}
+//回读电流最大值设置值
+void interps::on_CurrentMaxGet_clicked()
+{
+    QList<uint> ids;
+    ids.append(currentPsId + 9);
+    emit readNodes(ids);
 }

@@ -22,8 +22,6 @@ public:
 
     void changeWidgetStyle();
 
-    void changeMe(bool);
-
 signals:
     void beamStateChanged(int);
 

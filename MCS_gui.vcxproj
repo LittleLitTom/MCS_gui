@@ -94,6 +94,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>WIN32_LEAN_AND_MEAN</UndefinePreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>shell32.lib;"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uastackd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uabasecppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uapkicppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uaclientcppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll.dbg\libcryptod.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\xmlparsercppd.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll.dbg\libxml2d.lib";crypt32.lib;ws2_32.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -151,6 +152,8 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>shell32.lib;"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uastack.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uabasecpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uapkicpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\uaclientcpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\openssl\out32dll\libcrypto.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\lib\xmlparsercpp.lib";"..\..\..\..\..\..\Program Files (x86)\UnifiedAutomation\UaSdkCppBundlePubSubEval\third-party\win64\vs2015\libxml2\out32dll\libxml2.lib";crypt32.lib;ws2_32.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>

@@ -33,3 +33,12 @@ UI_DIR += .
 RCC_DIR += .
 include(MCS_gui.pri)
 TRANSLATIONS += qMCS_gui_zh_CN.ts
+
+FORMS += \
+    mychartview.ui
+
+HEADERS += \
+    mychartview.h
+
+SOURCES += \
+    mychartview.cpp

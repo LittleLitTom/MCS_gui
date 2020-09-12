@@ -1,7 +1,7 @@
 #pragma once
 #include <stdlib.h>
 #include <QtCore>
-#include "Uabase.h"
+#include "uasession.h"
 
 union MyUnion
 {
@@ -15,5 +15,9 @@ public:
 	static unsigned int floatToByte(float float_);
 	static float byteToFloat(unsigned int uint_);
 	static void OpcVarToQtVar(const OpcUa_Variant&,QVariant&);
+	static void QtVarToOpcVar(const QVariant&,OpcUa_Variant&);
+	static void UaVarToQtVar(const UaVariant&,QVariant&);
+	static void QtVarToUaVar(const QVariant&,UaVariant&);
 	static uint psIdToNum(const QString);
+	static uint scIdToNum(const QString);
 };

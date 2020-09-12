@@ -18,8 +18,15 @@ MainWindow::MainWindow(QWidget *parent)
     workThread = new QThread;
     Backend* myBackend = new Backend;
     myBackend->moveToThread(workThread);
+    //...
     connect(myBackend, &Backend::dataChange,interPS_,&interps::display_value);
     connect(this, &MainWindow::startAcquisition, myBackend, &Backend::runAcquisition);
+    //连接电源子界面
+    connect(interPS_, &interps::writeNodes, myBackend, &Backend::writeNodes);
+    connect(myBackend, &Backend::writeNodesResults, interPS_, &interps::process_write_results);
+    connect(interPS_, &interps::readNodes, myBackend, &Backend::readNodes);
+    connect(myBackend, &Backend::readNodesResults, interPS_, &interps::process_read_results);
+    //...
     connect(workThread,&QThread::finished,myBackend,&QObject::deleteLater);
     //启动采样
     emit(startAcquisition());
