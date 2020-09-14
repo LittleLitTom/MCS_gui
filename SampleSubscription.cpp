@@ -191,6 +191,8 @@ void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsT
     }
     xmlFile.close();
 
+    //命名空间
+    int namespaceId = 2;
     //获取根节点和子系统
     QDomElement root = doc.documentElement();
     QDomNodeList subsystems = root.childNodes();
@@ -225,17 +227,16 @@ void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsT
                 auto propertyId = properties.at(k).firstChild().toText().data().toUInt();
 
                 itemsToCreate[nu].ItemToMonitor.AttributeId = OpcUa_Attributes_Value;
-                itemsToCreate[nu].ItemToMonitor.NodeId.NamespaceIndex = 2;
+                itemsToCreate[nu].ItemToMonitor.NodeId.NamespaceIndex = namespaceId;
                 itemsToCreate[nu].ItemToMonitor.NodeId.Identifier.Numeric = propertyId;
                 itemsToCreate[nu].RequestedParameters.ClientHandle = propertyId;
                 itemsToCreate[nu].RequestedParameters.SamplingInterval = 100;
                 itemsToCreate[nu].RequestedParameters.QueueSize = 1;
                 itemsToCreate[nu].RequestedParameters.DiscardOldest = OpcUa_True;
                 itemsToCreate[nu].MonitoringMode = OpcUa_MonitoringMode_Reporting;
-
                 nu++;
-                //std::cout<<name<<std::endl;
             }
         }
+        namespaceId++;
     }
 }

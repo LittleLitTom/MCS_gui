@@ -479,7 +479,7 @@ uint utilities::psIdToNum(const QString psId)
 	{
 		return 0;
 	}
-	int m, n,p,q = 0;
+	uint m=0, n=0, p=0, q = 0;
 	if ((*psId.begin()) == 'Q')
 	{
 		m = 1;
@@ -556,11 +556,86 @@ uint utilities::psIdToNum(const QString psId)
 	{
 		tem.append(*iter);
 	}
-	return (100000000+m*1000000+n*10000+tem.toInt()*100);
+	//100000000是子系统
+	return (100000000+m*1000000+n*10000+tem.toUInt()*100);
 }
 
-uint utilities::scIdToNum(const QString)
+uint utilities::scIdToNum(const QString bdId)
 {
+	uint m = 0, n = 0, p = 0, q = 0;
 
-	return uint();
+	//求m
+	if (*bdId.begin() == "F")
+	{
+		m = 1;
+		p = 2;
+	}
+	else if (*bdId.begin() == "S")
+	{
+		m = 2;
+		p = 2;
+	}
+	else if (*bdId.begin() == "I")
+	{
+		m = 3;
+		p = 2;
+	}
+	//求n及q
+	if ((*(bdId.end() - 1)) == 'E')
+	{
+		n = 1;
+		q = 1;
+	}
+	else if ((*(bdId.end() - 1)) == '1')
+	{
+		q = 2;
+		if ((*(bdId.end() - 2)) == 'S')
+		{
+			n = 2;
+		}
+		else if ((*(bdId.end() - 2)) == 'F')
+		{
+			n = 3;
+		}
+	}
+	else if ((*(bdId.end() - 1)) == '2')
+	{
+		q = 2;
+		if ((*(bdId.end() - 2)) == 'P')
+		{
+			n = 4;
+		}
+		else if ((*(bdId.end() - 2)) == 'S')
+		{
+			n = 5;
+		}
+		else if ((*(bdId.end() - 2)) == 'G')
+		{
+			n = 6;
+		}
+	}
+	else if ((*(bdId.end() - 1)) == '3')
+	{
+		q = 2;
+		if ((*(bdId.end() - 2)) == 'P')
+		{
+			n = 7;
+		}
+		else if ((*(bdId.end() - 2)) == 'S')
+		{
+			n = 8;
+		}
+		else if ((*(bdId.end() - 2)) == 'G')
+		{
+			n = 9;
+		}
+	}
+	//求tem
+	QString tem;
+	for (auto iter = bdId.begin() + p; iter < bdId.end() - q; iter++)
+	{
+		tem.append(*iter);
+	}
+	//200000000
+	return (200000000 + m * 1000000 + n * 10000 + tem.toUInt() * 100);
 }

@@ -10,7 +10,7 @@ accelerater::accelerater(QWidget *parent) :
 
     //对加速器部件进行初始化
     acceleratorInitialize();
-    //为Accelerator中的控件加上ToolTip和StatusTip
+    //为Accelerator界面中的所有控件加上ToolTip和StatusTip
     auto objectList = ui->frame->children();
     for(int i=0;i<objectList.length();i++)
     {
@@ -21,10 +21,6 @@ accelerater::accelerater(QWidget *parent) :
         b->setStatusTip(b->objectName());
         }
     }
-
-    //插入元素
-    myButtons[1] = ui->Q1E;
-    myButtons[2] = ui->Q2E;
 
     //信号与槽(束线状态指示灯)
     this->connect(this,&accelerater::beamStateChanged,this,&accelerater::changeWidgetStyle);

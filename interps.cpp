@@ -45,15 +45,21 @@ interps::~interps()
 
 void interps::display_value(uint psId, QVariant data)
 {
-    //电源项
-    //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100 -1, 磁铁区域: psId / 10000 % 100 -1,  磁铁类型: psId / 1000000 % 100 -1
-    auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100-1)->child(psId / 1000000 % 100-1)->child(psId / 100 % 100 - 1);
-    
+    //非电源子系统直接返回
+    if (psId/100000000 != 1)
+    {
+        return;
+    }
+
     //电源控制变量
     int psProperty = psId % 100;
     //电源Id
     uint psIdentify = psId / 100 * 100;
 
+    //电源项
+    //根目录: itemAt(0,0),  磁铁编号: psId / 100 % 100 -1, 磁铁区域: psId / 10000 % 100 -1,  磁铁类型: psId / 1000000 % 100 -1
+    auto item = ui->treeWidget->itemAt(0, 0)->child(psId / 10000 % 100-1)->child(psId / 1000000 % 100-1)->child(psId / 100 % 100 - 1);
+    
     //switch
     if (psProperty == 1)
     {
@@ -101,7 +107,7 @@ void interps::display_value(uint psId, QVariant data)
 
         //显示在电源监控界面的左侧条目上
         QString statusIcon;
-        if (status[0] == 0) // 电源状态正常
+        if (status[0] == 0) // 电源状态正常(不故障)
         {
             if (status[1] == 0) //电源开
             {

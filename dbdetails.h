@@ -55,8 +55,10 @@ private:
     //与图形(波形)显示相关
     //x方向图形积分
     QChart* myChartX;
+    QLineSeries* myChartXseries;
     //y方向图形积分
     QChart* myChartY;
+    QLineSeries* myChartYseries;
     //散点图
     QChart* myChartDot;
 };

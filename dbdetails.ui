@@ -69,7 +69,7 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="Trigger">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -101,7 +101,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="Pushin_status">
          <property name="frameShape">
           <enum>QFrame::Box</enum>
          </property>
@@ -111,7 +111,7 @@
         </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="Pullout_status">
          <property name="frameShape">
           <enum>QFrame::Box</enum>
          </property>
@@ -183,7 +183,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="frequencySet">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -196,7 +196,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="frequencyGet">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -209,7 +209,7 @@
         </widget>
        </item>
        <item row="0" column="0" colspan="2">
-        <widget class="QSpinBox" name="spinBox">
+        <widget class="QSpinBox" name="frequency">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -228,7 +228,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0" colspan="2">
-        <widget class="QSpinBox" name="spinBox_2">
+        <widget class="QSpinBox" name="samplingPoints">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -238,7 +238,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="samplingPointsSet">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -251,7 +251,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="samplingPointsGet">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -293,7 +293,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLabel" name="label_18">
+        <widget class="QLabel" name="BeamPosition_y">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -323,7 +323,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="label_17">
+        <widget class="QLabel" name="BeamPosition_x">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -351,7 +351,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
        <item row="1" column="1">
-        <widget class="QLabel" name="label_23">
+        <widget class="QLabel" name="PositionMean_y">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -361,7 +361,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="label_21">
+        <widget class="QLabel" name="PositionMean_x">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -440,7 +440,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="label_19">
+        <widget class="QLabel" name="BeamFWHM_x">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -470,7 +470,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLabel" name="label_20">
+        <widget class="QLabel" name="BeamFWHM_y">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -509,7 +509,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="label_22">
+        <widget class="QLabel" name="FWHMMean_x">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -539,7 +539,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLabel" name="label_24">
+        <widget class="QLabel" name="FWHMMean_y">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -552,45 +552,21 @@
      </widget>
     </item>
     <item row="5" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox_7">
+     <widget class="QGroupBox" name="xProfileBox">
       <property name="title">
        <string>X Profile</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_7">
-       <item row="0" column="0">
-        <widget class="QWidget" name="myXwaveBox" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
     <item row="5" column="2">
-     <widget class="QGroupBox" name="groupBox_8">
+     <widget class="QGroupBox" name="yProfileBox">
       <property name="title">
        <string>Y Profile</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <widget class="QWidget" name="widget_5" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
     <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="bdIdentifier">
       <property name="font">
        <font>
         <pointsize>16</pointsize>
@@ -604,7 +580,7 @@
      </widget>
     </item>
     <item row="1" column="2" rowspan="4">
-     <widget class="QGroupBox" name="groupBox_11">
+     <widget class="QGroupBox" name="beamSpotBox">
       <property name="title">
        <string>束流光斑</string>
       </property>

@@ -33,8 +33,6 @@ private:
     Ui::accelerater *ui;
     //代表束线状态
     int m_beamState;
-    //容器，装载所有部件(基于Button)
-    std::map<uint,QPushButton*> myButtons;
 };
 
 #endif // ACCELERATER_H
