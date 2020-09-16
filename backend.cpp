@@ -42,7 +42,7 @@ void Backend::writeNodes(QList<uint> ids, QList<QVariant> datas)
     for (auto data : datas)//这种遍历方式效率更高
     {
         writeValues[i].AttributeId = OpcUa_Attributes_Value;
-        writeValues[i].NodeId.NamespaceIndex = 2;
+        writeValues[i].NodeId.NamespaceIndex = 3;
         writeValues[i].NodeId.Identifier.Numeric = ids.at(i);
         utilities::QtVarToUaVar(data, Tem);
         OpcUa_Variant_CopyTo(Tem, &writeValues[i].Value.Value);
@@ -80,7 +80,7 @@ void Backend::readNodes(QList<uint> ids)
     for (int i = 0; i < ids.count(); i++)
     {
         readValueId[i].AttributeId = OpcUa_Attributes_Value;
-        readValueId[i].NodeId.NamespaceIndex = 2;
+        readValueId[i].NodeId.NamespaceIndex = 3;
         readValueId[i].NodeId.Identifier.Numeric = ids[i];
     }
 

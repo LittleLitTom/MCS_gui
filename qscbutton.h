@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QPushButton>
-#include "dbdetails.h"
 
 class QSCButton : public QPushButton
 {
@@ -27,7 +26,6 @@ private:
     int m_location;
     //on? off?
     uint m_state;
-    DBDetails* DBDetails_;
 };
 
 #endif // QSCBUTTON_H

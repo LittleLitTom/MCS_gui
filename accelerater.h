@@ -25,6 +25,9 @@ public:
 signals:
     void beamStateChanged(int);
 
+    //弹出子界面时，该信号发射
+    void aNewSubInterface(QString activeBDname);
+
 private slots:
 
 private:

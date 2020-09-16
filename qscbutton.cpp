@@ -1,4 +1,5 @@
 #include "qscbutton.h"
+#include "accelerater.h"
 #include <QBitmap>
 
 QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
@@ -8,7 +9,6 @@ QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
     this->connect(this,&QSCButton::stateChanged,this,&QSCButton::changeButtonStyle);
 
     //initialize
-    DBDetails_ = nullptr;
     m_state = true;
     m_type = 4;
     m_location = 99999;
@@ -17,8 +17,7 @@ QSCButton::QSCButton(QWidget *parent) : QPushButton(parent)
 
 void QSCButton::onclick()
 {
-        DBDetails_ = new DBDetails(this, objectName());
-        DBDetails_->show();
+    emit static_cast<accelerater*>(this->parent()->parent())->aNewSubInterface(objectName());
 }
 
 void QSCButton::changeButtonStyle()

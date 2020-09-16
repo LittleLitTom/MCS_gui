@@ -5,10 +5,10 @@
 #include <QButtonGroup>
 #include "utilities.h"
 
-//!!!ÌØ±ğËµÃ÷£º
-//¶ÔQtChartsµÄÊ¹ÓÃÒ»¶¨Òª½÷É÷£¬ÔÚÍ·ÎÄ¼şÖĞ²ÉÓÃ#include<QtCharts>µÄ·½·¨¼«Ò×Ôì³É±àÒë´íÎó
-//¹Ê¶ø²ÉÓÃÔÚÍ·ÎÄ¼şÖĞÉùÃ÷QChartsÀà£¬ÔÚÔ´ÎÄ¼şÖĞÌí¼ÓÍ·ÎÄ¼şµÄ·½·¨£¬ÇÒÌí¼ÓÍ·ÎÄ¼şÊ±£¬²»ÁıÍ³µÄ#include<QtCharts>£¬¶øÊÇ·Ö×ÓÄ£¿éÌí¼Ó
-//¿ÉÒÔÓĞĞ§µÄ¹æ±Ü±àÒë´íÎó
+//!!!ï¿½Ø±ï¿½Ëµï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½QtChartsï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½Ğ²ï¿½ï¿½ï¿½#include<QtCharts>ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½QChartsï¿½à£¬ï¿½ï¿½Ô´ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½#include<QtCharts>ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½Ä¹ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 namespace QtCharts
 {
@@ -31,35 +31,51 @@ public:
     explicit DBDetails(QWidget *parent = nullptr,QString DBname = NULL);
     ~DBDetails();
 
-    //ÒÔÏÂ²Ûº¯ÊıÓëºó¶Ë(backend)½»»¥
-    //monitor-Ê÷×´Ä¿Â¼
+    //åˆå§‹åŒ–ç•Œé¢
+    void initialDBDetails();
+    //ï¿½ï¿½ï¿½Â²Ûºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(backend)ï¿½ï¿½ï¿½ï¿½
+    //monitor-ï¿½ï¿½×´Ä¿Â¼
     void display_value(uint dbId, QVariant data);
-    //read & write--ÓÒ¶Ë½çÃæ
-    //»ØÊÕĞÅºÅ(read½á¹û),²¢ÔÚÓÒ¶Ë½çÃæÏÔÊ¾
+    //read & write--ï¿½Ò¶Ë½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½(readï¿½ï¿½ï¿½ï¿½),ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶Ë½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
     void process_read_results(QList<uint>ids, QList<QVariant>datas, QList<int>results);
-    //»ØÊÕĞÅºÅ(write½á¹û)£¬²¢´¦Àí
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½(writeï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     void process_write_results(QList<uint>ids, QList<int>results);
 
-    //ÒÔÏÂĞÅºÅÓÉ½çÃæ·¢ËÍ¸ø²Ûº¯Êı
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½É½ï¿½ï¿½æ·¢ï¿½Í¸ï¿½ï¿½Ûºï¿½ï¿½ï¿½
 signals:
     void writeNodes(QList<uint>ids, QList<QVariant>datas);
     void readNodes(QList<uint> ids);
+
+private slots:
+    void on_Trigger_clicked();
+
+    void on_frequencySet_clicked();
+
+    void on_frequencyGet_clicked();
+
+    void on_samplingPointsSet_clicked();
+
+    void on_samplingPointsGet_clicked();
+
+    void ON_daqModeGroup_clicked(int id);
+    void ON_motionGroup_clicked(int id);
 
 private:
     Ui::DBDetails *ui;
     QString DBname;
     uint DBId;
-    //ÓëcheckButtonÏà¹Ø,Button Group½«Èô¸ÉCheck Button×éºÏÎªÒ»×é
-    QButtonGroup* daqModeGroup;//Á¬Ğø²ÉÑù»òµ¥µã´¥·¢
-    QButtonGroup* motionGroup;//Æô¶¯¿ØÖÆ£¬²åÈë»òÕß°Î³ö
-    //ÓëÍ¼ĞÎ(²¨ĞÎ)ÏÔÊ¾Ïà¹Ø
-    //x·½ÏòÍ¼ĞÎ»ı·Ö
+    //ï¿½ï¿½checkButtonï¿½ï¿½ï¿½ï¿½,Button Groupï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Check Buttonï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½
+    QButtonGroup* daqModeGroup;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½òµ¥µã´¥ï¿½ï¿½
+    QButtonGroup* motionGroup;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß°Î³ï¿½
+    //ï¿½ï¿½Í¼ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+    //xï¿½ï¿½ï¿½ï¿½Í¼ï¿½Î»ï¿½ï¿½ï¿½
     QChart* myChartX;
     QLineSeries* myChartXseries;
-    //y·½ÏòÍ¼ĞÎ»ı·Ö
+    //yï¿½ï¿½ï¿½ï¿½Í¼ï¿½Î»ï¿½ï¿½ï¿½
     QChart* myChartY;
     QLineSeries* myChartYseries;
-    //É¢µãÍ¼
+    //É¢ï¿½ï¿½Í¼
     QChart* myChartDot;
 };
 

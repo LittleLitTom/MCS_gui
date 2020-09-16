@@ -21,7 +21,6 @@ accelerater::accelerater(QWidget *parent) :
         b->setStatusTip(b->objectName());
         }
     }
-
     //信号与槽(束线状态指示灯)
     this->connect(this,&accelerater::beamStateChanged,this,&accelerater::changeWidgetStyle);
     //初始化束线状态(无束流)
