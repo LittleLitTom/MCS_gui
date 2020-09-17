@@ -42,8 +42,15 @@ void Backend::writeNodes(QList<uint> ids, QList<QVariant> datas)
     for (auto data : datas)//这种遍历方式效率更高
     {
         writeValues[i].AttributeId = OpcUa_Attributes_Value;
-        writeValues[i].NodeId.NamespaceIndex = 3;
-        writeValues[i].NodeId.Identifier.Numeric = ids.at(i);
+        writeValues[i].NodeId.NamespaceIndex = 2;
+        OpcUa_String mc;
+        //--------------------------------------------------
+        //writeValues[i].NodeId.Identifier.Numeric = ids.at(i);
+        //--------------------------------------------------
+        //UaString mk(utilities::scStandardToUserId(ids.at(i)).toStdString().c_str());
+        //writeValues[i].NodeId.Identifier.String = *mk.toOpcUaString();
+        //--------------------------------------------------
+        UaNodeId(utilities::scStandardToUserId(ids.at(i)).toStdString().c_str(), 2).copyTo(&writeValues[i].NodeId);
         utilities::QtVarToUaVar(data, Tem);
         OpcUa_Variant_CopyTo(Tem, &writeValues[i].Value.Value);
         i++;
@@ -80,8 +87,14 @@ void Backend::readNodes(QList<uint> ids)
     for (int i = 0; i < ids.count(); i++)
     {
         readValueId[i].AttributeId = OpcUa_Attributes_Value;
-        readValueId[i].NodeId.NamespaceIndex = 3;
-        readValueId[i].NodeId.Identifier.Numeric = ids[i];
+        readValueId[i].NodeId.NamespaceIndex = 2;
+        //-------------------------------------------------
+        //readValueId[i].NodeId.Identifier.Numeric = ids[i];
+        //-------------------------------------------------
+        //UaString mk(utilities::scStandardToUserId(ids.at(i)).toStdString().c_str());
+        //readValueId[i].NodeId.Identifier.String = *mk.toOpcUaString();
+        //-------------------------------------------------
+        UaNodeId(utilities::scStandardToUserId(ids.at(i)).toStdString().c_str(), 2).copyTo(&readValueId[i].NodeId);
     }
 
     //执行读操作

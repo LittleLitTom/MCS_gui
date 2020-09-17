@@ -639,3 +639,14 @@ uint utilities::scIdToNum(const QString bdId)
 	//200000000
 	return (200000000 + m * 1000000 + n * 10000 + tem.toUInt() * 100);
 }
+
+QString utilities::scStandardToUserId(uint scStandardId)
+{
+	return QString("BD.MW.cDAQ_setting."+QString::number(scStandardId));
+}
+
+uint utilities::scUserToStandardId(QString scUserId)
+{
+	auto stringlists = scUserId.split('.');
+	return stringlists[3].toUInt();
+}

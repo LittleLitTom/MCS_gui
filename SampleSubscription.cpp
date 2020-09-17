@@ -191,7 +191,7 @@ void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsT
     }
     xmlFile.close();
 
-    //命名空间
+    //opc ua命名空间默认为2
     int namespaceId = 2;
     //获取根节点和子系统
     QDomElement root = doc.documentElement();
@@ -227,8 +227,13 @@ void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsT
                 auto propertyId = properties.at(k).firstChild().toText().data().toUInt();
 
                 itemsToCreate[nu].ItemToMonitor.AttributeId = OpcUa_Attributes_Value;
-                itemsToCreate[nu].ItemToMonitor.NodeId.NamespaceIndex = namespaceId;
-                itemsToCreate[nu].ItemToMonitor.NodeId.Identifier.Numeric = propertyId;
+                UaNodeId(utilities::scStandardToUserId(propertyId).toStdString().c_str(), namespaceId).copyTo(&itemsToCreate[nu].ItemToMonitor.NodeId);
+                //itemsToCreate[nu].ItemToMonitor.NodeId.NamespaceIndex = namespaceId;
+                //---------------------------------------------------------------------
+                //itemsToCreate[nu].ItemToMonitor.NodeId.Identifier.Numeric = propertyId;
+                //----------------------------------------------------------------------
+                //itemsToCreate[nu].ItemToMonitor.NodeId.Identifier.String = *mk.toOpcUaString();
+                //----------------------------------------------------------------------
                 itemsToCreate[nu].RequestedParameters.ClientHandle = propertyId;
                 itemsToCreate[nu].RequestedParameters.SamplingInterval = 100;
                 itemsToCreate[nu].RequestedParameters.QueueSize = 1;
@@ -237,6 +242,5 @@ void SampleSubscription::buildMonitorItems(UaMonitoredItemCreateRequests& itemsT
                 nu++;
             }
         }
-        namespaceId++;
     }
 }

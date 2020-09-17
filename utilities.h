@@ -20,4 +20,9 @@ public:
 	static void QtVarToUaVar(const QVariant&,UaVariant&);
 	static uint psIdToNum(const QString);
 	static uint scIdToNum(const QString);
+
+	//.....”Î ¯≤‚≤‚ ‘œ‡πÿ
+	static QString scStandardToUserId(uint);
+	static uint scUserToStandardId(QString);
+	//....
 };
